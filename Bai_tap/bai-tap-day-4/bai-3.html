@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Form khảo sát ý kiến</title>
+    <style>
+      #comment {
+        display: block;
+      }
+      #lbl-comment {
+        height: 90px;
+        width: 210px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Form khảo sát ý kiến</h1>
+    <!--  -->
+    <form>
+      <div>
+        <label for="lbl-name">Họ và tên:</label>
+        <input
+          type="text"
+          id="lbl-name"
+          name="name"
+          placeholder="Nhập họ và tên..."
+        />
+      </div>
+
+      <div>
+        <label>Mức độ hài lòng:</label>
+        <input type="range" name="level" min="0" max="10" value="4" />
+      </div>
+
+      <div>
+        <label for="lbl-time">Thời gian liên hệ:</label>
+        <input type="time" id="lbl-time" name="time" />
+      </div>
+
+      <div>
+        <label>Kênh thông tin:</label>
+        <label for="lbl-facebook">
+          <input type="checkbox" id="lbl-facebook" name="facebook" />
+          Facebook
+        </label>
+        <label for="lbl-youtube">
+          <input type="checkbox" id="lbl-youtube" name="Youtube" />
+          Youtube
+        </label>
+        <label for="lbl-website">
+          <input type="checkbox" id="lbl-website" name="website" />
+          Website
+        </label>
+      </div>
+
+      <div>
+        <label for="lbl-comment" id="comment">Góp ý khác:</label>
+        <textarea
+          id="lbl-comment"
+          name="comment"
+          placeholder="Nhập ý kiến đóng góp..."
+        >
+        </textarea>
+      </div>
+      <!--  -->
+      <button type="submit">Gửi</button>
+    </form>
+  </body>
+</html>

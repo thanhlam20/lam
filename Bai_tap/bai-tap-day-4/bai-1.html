@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form đăng kí tài khoản</title>
+    <style>
+        .lbl-descrip{
+            display: block;
+            width: 360px;
+            height: 80px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Form đăng kí tài khoản</h1>
+    <form action="">
+        <div>
+            <label for="lbl-fullname">Họ tên:</label>
+            <input type="text" id="lbl-fullname" name="fullname" placeholder="Nhập họ và tên..." />
+            </label>
+        </div>
+
+        <div>
+            <label for="lbl-email">Email:</label>
+            <input type="email" id="lbl-email" name="email" placeholder="Nhập Email..." /> 
+        </div>
+
+        <div>
+            <label for="lbl-password">Mật khẩu:</label>
+            <input type="password" id="lbl-password" name="password" placeholder="Nhập mật khẩu..." />
+        </div>
+
+        <div>
+            <label for="">Ngày sinh</label>
+            <input type="date" id="lbl-birthday" name="birthday" />
+        </div>
+
+        <div>
+            <label>Giới tính:</label>
+            <label><input type="radio" name="gender" value="male" /> Nam </label>
+            <label><input type="radio" name="gender" value="female" /> Nữ </label>
+            <label><input type="radio" name="gender" value="unknow" /> Khác </label>
+        </div>
+
+        <div>
+            <label>Sở thích:</label>
+            <label><input type="checkbox" name="hobby" value="reading" /> Đọc sách </label>
+            <label><input type="checkbox" name="hobby" value="traveling" /> Du lịch </label>
+            <label><input type="checkbox" name="hobby" value="sport" /> Thể thao </label>
+        </div>
+
+        <div>
+            <label>Mô tả bản thân:</label>
+            <textarea name="descrip" class="lbl-descrip" placeholder="Nhập mô tả bản thân..."></textarea>
+        </div>
+
+        <button type="submit">Đăng ký</button>
+        <button type="reset">Xoá</button>
+    </form>
+</body>
+</html>

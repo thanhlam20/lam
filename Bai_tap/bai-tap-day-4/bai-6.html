@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Service login</title>
+  </head>
+  <style>
+    table {
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+    tfoot {
+      text-align: center;
+    }
+  </style>
+  <body>
+    <form>
+      <table cellpadding="5">
+        <!-- thead -->
+        <thead>
+          <th colspan="2">Novell Seevices Login</th>
+        </thead>
+        <!-- tbody -->
+        <tbody>
+          <!-- user -->
+          <tr>
+            <td>
+              <label for="lbl-username">Username:</label>
+            </td>
+            <td>
+              <input
+                type="text"
+                id="lbl-username"
+                name="Username"
+                placeholder=""
+              />
+            </td>
+          </tr>
+          <!-- password -->
+          <tr>
+            <td>
+              <label for="lbl-password">Password:</label>
+            </td>
+            <td>
+              <input
+                type="password"
+                id="lbl-password"
+                name="Password"
+                placeholder=""
+              />
+            </td>
+          </tr>
+          <!-- nhập tên thành phố -->
+          <tr>
+            <td>
+              <label for="lbl-city">City of<br />Employment:</label>
+            </td>
+            <td>
+              <input type="text" id="lbl-city" name="city" />
+            </td>
+          </tr>
+          <!-- server -->
+          <tr>
+            <td>
+              <label for="lbl-webserver">Web server:</label>
+            </td>
+            <td>
+              <select name="webserver" id="lbl-webserver">
+                <option value="server0">--choose a server--</option>
+                <option value="server1">Vietnamese</option>
+                <option value="server2">Japan</option>
+              </select>
+            </td>
+          </tr>
+
+          <!-- role -->
+          <tr>
+            <td>
+              <label
+                >Please specify <br />
+                your role:</label
+              >
+            </td>
+            <td>
+              <div>
+                <label>
+                  <input type="radio" name="role" value="admin" />Admin
+                </label>
+              </div>
+
+              <div>
+                <label>
+                  <input type="radio" name="role" value="enginner" />Enginner
+                </label>
+              </div>
+
+              <div>
+                <label>
+                  <input type="radio" name="role" value="manager" />Manager
+                </label>
+              </div>
+
+              <div>
+                <label>
+                  <input type="radio" name="role" value="guest" />Guest
+                </label>
+              </div>
+            </td>
+          </tr>
+          <!-- single sign-on -->
+          <tr>
+            <td>
+              <label
+                >Single Sign-on <br />
+                To The Following:
+              </label>
+            </td>
+            <td>
+              <div><input type="checkbox" name="mail" />Mail</div>
+              <div><input type="checkbox" name="payroll" />Payroll</div>
+              <div><input type="checkbox" name="s-service" />Self-service</div>
+            </td>
+          </tr>
+        </tbody>
+        <!-- tfoot -->
+        <tfoot>
+          <tr>
+            <td colspan="2">
+              <button type="submit">Login</button>
+              <button type="reset">Reset</button>
+            </td>
+          </tr>
+        </tfoot>
+      </table>
+    </form>
+  </body>
+</html>

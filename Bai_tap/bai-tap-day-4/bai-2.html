@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Form đặt hàng sản phẩm</title>
+  </head>
+  <body>
+    <h1>Form đặt hàng sản phẩm</h1>
+    <form>
+      <fieldset style="width: 450px; height: 78px;">
+        <legend >Thông tin đơn hàng</legend>
+        <!--  -->
+        <div>
+          <label for="product">Tên sản phẩm:</label>
+          <select name="product" id="product">
+            <option value="product1">Iphone 11</option>
+            <option value="product2">Iphone 12</option>
+            <option value="product3">Iphone 13</option>
+            <option value="product4">Iphone 14</option>
+          </select>
+        </div>
+
+        <div>
+          <label for="lbl-quantity">Số lượng:</label>
+          <input
+            type="number"
+            id="lbl-quantity"
+            name="quantity"
+            placeholder="Nhập số lượng..."/>
+        </div>
+
+        <div>
+          <label for="lbl-file">Upload ảnh thanh toán:</label>
+          <input type="file" id="lbl-file" name="file" />
+        </div>
+      </fieldset>
+
+      <button type="submit">Đặt hàng</button>
+    </form>
+  </body>
+</html>
