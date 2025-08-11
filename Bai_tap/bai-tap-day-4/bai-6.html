@@ -15,7 +15,7 @@
     }
   </style>
   <body>
-    <form>
+    <form action="#" method="post">
       <table cellpadding="5">
         <!-- thead -->
         <thead>
@@ -25,7 +25,7 @@
         <tbody>
           <!-- user -->
           <tr>
-            <td>
+            <td style="width: 50px">
               <label for="lbl-username">Username:</label>
             </td>
             <td>
@@ -117,9 +117,24 @@
               </label>
             </td>
             <td>
-              <div><input type="checkbox" name="mail" />Mail</div>
-              <div><input type="checkbox" name="payroll" />Payroll</div>
-              <div><input type="checkbox" name="s-service" />Self-service</div>
+              <label for="lbl-mail">
+                <div>
+                  <input type="checkbox" id="lbl-mail" name="mail" />
+                  Mail
+                </div>
+              </label>
+              <label for="lbl-payroll">
+                <div>
+                  <input type="checkbox" id="lbl-payroll" name="payroll" />
+                  Payroll
+                </div>
+              </label>
+              <label for="lbl-service">
+                <div>
+                  <input type="checkbox" id="lbl-service" name="s-service" />
+                  Self-service
+                </div>
+              </label>
             </td>
           </tr>
         </tbody>

@@ -7,9 +7,9 @@
   </head>
   <body>
     <h1>Form đặt hàng sản phẩm</h1>
-    <form>
-      <fieldset style="width: 450px; height: 78px;">
-        <legend >Thông tin đơn hàng</legend>
+    <form1 action="#" method="post">
+      <fieldset style="width: 450px; height: 78px">
+        <legend>Thông tin đơn hàng</legend>
         <!--  -->
         <div>
           <label for="product">Tên sản phẩm:</label>
@@ -27,16 +27,17 @@
             type="number"
             id="lbl-quantity"
             name="quantity"
-            placeholder="Nhập số lượng..."/>
+            placeholder="Nhập số lượng..."
+          />
         </div>
 
         <div>
           <label for="lbl-file">Upload ảnh thanh toán:</label>
-          <input type="file" id="lbl-file" name="file" />
+          <input type="file" id="lbl-file" name="file" accept="image/* />
         </div>
       </fieldset>
 
       <button type="submit">Đặt hàng</button>
-    </form>
+    </form1>
   </body>
 </html>

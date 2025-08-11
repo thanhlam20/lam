@@ -11,7 +11,7 @@
     </style>
   </head>
   <body>
-    <form>
+    <form action="#" method="post">
       <table border="1" cellpadding="8">
         <!-- thead -->
         <thead>
@@ -100,7 +100,29 @@
               <label>Ngày sinh</label>
             </td>
             <td>
-              <input type="date" name="birthday" />
+              <label>
+                <select name="day" id="lbl-day">
+                  <option value="1">Ngày 1</option>
+                  <option value="2">Ngày 2</option>
+                  <option value="3">Ngày 3</option>
+                </select>
+              </label>
+
+              <label>
+                <select name="month" id="lbl-month">
+                  <option value="1">Tháng 1</option>
+                  <option value="2">Tháng 2</option>
+                  <option value="3">Tháng 3</option>
+                </select>
+              </label>
+
+              <label>
+                <select name="year" id="lbl-year">
+                  <option value="1">Năm 2015</option>
+                  <option value="2">Năm 2016</option>
+                  <option value="3">Năm 2017</option>
+                </select>
+              </label>
             </td>
           </tr>
           <!-- address -->
