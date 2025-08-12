@@ -1,0 +1,38 @@
+/* h2::before {
+    content: "A";
+}
+h2::after {
+    content: "";
+}
+p::first-letter {
+    color: red;
+    font-size: 50px;
+}
+p::first-line {
+    color: aquamarine;
+}
+p::selection {
+    color: #fff;
+    background-color: red;
+}
+input::placeholder {
+    color: orange;
+} */
+
+
+/* input:hover::placeholder {
+    color: blueviolet;
+} */
+
+ /* input:not(input[type="email"], input[type="number"])  {
+    background-color: yellow;
+ } */
+
+ .box:checked ~ span {
+    color: red;
+ }
+ input:disabled {
+    border-color: red;
+    color: white;
+    background-color: gray;
+ }

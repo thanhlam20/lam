@@ -1,0 +1,19 @@
+/* p ~ h2{
+    color: blue ;
+} */
+
+/* h2+h2 {
+    color: red;
+} */
+ /* a[target] {
+    color: green;
+ }
+ a[target="_parent"] {
+    color: brown;
+ } */
+ /* a[title$="222"] {
+    color: orange;
+ } */
+  h2[class^=title-]{
+    color: red;
+  }
