@@ -1,0 +1,38 @@
+body {
+    width: 800px;
+    margin: 0 auto;
+    font-size: 62.5%;
+    font-family: Arial, sans-serif;
+    text-align: center;
+}
+
+h1 {
+    font-size: 4rem;
+    margin: 50px 0 30px;
+}
+
+.content {
+    width: 100%;
+}
+
+.content th {
+    color: #fff;
+    background-color: #333;
+    text-transform: uppercase;
+}
+
+.content,th,td {
+    padding: 10px;
+    font-size: 2rem;
+    border: 2px solid #c0b2b2;
+    border-collapse: collapse;
+}
+
+.content tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+.content tr:hover {
+    background-color: rgba(237, 206, 176, 0.3);
+}
+

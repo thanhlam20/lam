@@ -12,7 +12,7 @@ h1{
     text-decoration: underline;
 }
 
-.box > p {
+.box  p {
     background-color: yellow;
 }
 
@@ -67,3 +67,5 @@ p::first-line {
 p::selection {
     background-color: green;
 }
+
+

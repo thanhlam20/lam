@@ -1,0 +1,46 @@
+body {
+    font-size: 62.5%;
+    width: 700px;
+    margin: 0 auto;
+    background-color: #fcf5ee;
+    font-family: Arial, sans-serif;
+}
+
+h1 {
+    color: #8e491a;
+    padding:50px 40px 30px;
+    margin: 10px;
+    font-size: 4.3rem;
+}
+
+.menu  {
+    width: 530px;
+    font-size: 2rem;
+    border-collapse: collapse;
+}
+
+.icon:before {
+    content: "";
+    background-image: url(https://cdn-icons-png.freepik.com/512/7570/7570135.png);
+    background-size: 27px;
+    width: 27px;
+    height: 27px;
+    padding-right: 4px;
+    background-repeat: no-repeat;
+    display: inline-block;
+}
+
+.menu tr td {
+    padding: 10px;
+    border-bottom: 2px solid #b8b6b4;
+}
+
+.menu tr td:last-child {
+    color: #8e491a;
+    font-weight: bold;
+    text-align: right;
+}
+
+.menu tr:hover {
+    background-color: rgba(237, 206, 176, 0.3);
+}

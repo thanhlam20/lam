@@ -1,0 +1,22 @@
+body {
+    font-size: 62.5%;
+   font-family: Georgia, serif;
+}
+
+h1 {
+    color: red;
+    padding: 40px 0 10px;
+    font-size: 3.3rem;
+    text-align: center;
+    text-transform: uppercase;
+}
+p {
+    margin-left: 15px;
+    font-size: 1.8rem;
+    line-height: 3.5rem;
+}
+
+p::first-letter {
+    color: red;
+    font-size: 3rem;
+}

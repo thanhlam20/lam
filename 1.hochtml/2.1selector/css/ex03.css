@@ -1,0 +1,16 @@
+#red:checked ~ nav label[for="red"],
+#red:checked ~ .content 
+{
+    color: red;
+}
+
+
+#blue:checked ~ nav label[for="blue"] ,
+#blue:checked~.content {
+    color: blue;
+}
+
+#green:checked ~ nav label[for="green"] ,
+#greem:checked~.content {
+    color: green;
+}
