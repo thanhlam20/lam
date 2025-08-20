@@ -1,0 +1,39 @@
+body {
+    font-size: 62.5%;
+    padding: 0;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #2f3e4d;
+}
+
+#header {
+    width: 1600px;
+    height: 50px;
+    margin: 0 auto;
+    background-color: #1f4959;
+    border-radius: 5px;
+}
+#nav {
+    padding: 0;
+    margin: 50px 0;
+}
+
+#nav  li {
+    font-size: 1.3rem;
+    display: inline-block;
+    text-align: center;
+}
+ 
+#nav li a {
+    color: #fff;
+    text-decoration: none;
+    line-height: 50px;
+    padding: 0 30px;
+    display: block;
+}
+
+#nav li a:hover {
+    background-color: #e75140;
+    border-radius: 5px;
+}
+
