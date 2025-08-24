@@ -32,10 +32,6 @@ body {
     font-family: sans-serif;
 }
 
-.container {
-    margin: 0 auto;
-}
-
 .content {
     margin: 30px 0;
 }
@@ -57,6 +53,7 @@ body {
 .col-third h3 {
     font-size: 1rem;
     margin: 10px 0 5px;
+    line-height: 1.4;
 }
 
 .col-third .by-item {
@@ -79,6 +76,13 @@ body {
     padding: 5px 0;
     margin-bottom: 10px;
     font-size: 1rem;
+    line-height: 1.5;
+    display: -webkit-box;
+    line-clamp: 3;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 .col-third .btn-margin {

@@ -68,6 +68,12 @@ body {
     font-size: 0.9rem;
     line-height: 1.5;
     margin-bottom: 10px;
+    display: -webkit-box;
+    line-clamp: 4;
+    -webkit-line-clamp: 4;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 .services-list .col .btn-margin {

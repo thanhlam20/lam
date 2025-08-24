@@ -1,0 +1,134 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-size: 62.5%;
+    font-family: sans-serif;
+}
+
+/*  */
+
+h2 > a {
+    color: #000;
+    font-size: 1.3rem;
+    line-height: 1.4;
+    font-weight: 500;
+    text-decoration: none;
+    display: -webkit-box;
+    line-clamp: 4;
+    -webkit-line-clamp: 4;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+/*  */
+
+#main #container {
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+}
+/* top header */
+#main #header {
+    display: flex;
+}
+#header .header-icon {
+    width: 30px;
+    height: 30px;
+    margin: 18px 10px 10px 0;
+    border-radius: 50%;
+}
+
+#header .header-text {
+    color: #333;
+    font-size: 1.1rem;
+    padding: 7px 20px;
+    margin: 15px 0;
+    font-weight: 300;
+    background-color: rgb(220, 232, 243);
+    border-radius: 999px;
+    display: flex;
+}
+
+.header-text .text-color {
+    color: #a09e9e;
+}
+/*  content-box */
+#content-box {
+    display: flex;
+}
+/* content-left */
+#container #content-box #content-left {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+}
+
+#content-box #content-left section {
+    display: flex;
+    padding: 10px 0;
+    border-bottom: 1px solid #333;
+}
+
+#content-left .section-left .content-left-img {
+    width: 150px;
+    height: 100px;
+}
+
+.section-left h2 {
+    margin-left: 15px;
+}
+
+/* content main */
+#content-box #content-main {
+    display: flex;
+    flex-direction: column;
+    margin: 10px 25px;
+}
+
+#content-main > img {
+    width: 600px;
+    height: 400px;
+    margin-bottom: 20px;
+}
+
+#content-main h1 a {
+    color: #000;
+    font-size: 2rem;
+    text-decoration: none;
+    line-height: 1.4;
+}
+
+#content-main > p {
+    font-size: 1rem;
+    line-height: 1.6;
+    margin: 10px 0;
+}
+
+#content-main  ul  li {
+    font-size: 1.4rem;
+    margin: 10px 23px; 
+}
+
+/* content-right */
+.content-right section {
+    display: flex;
+    flex-direction: column;
+    margin-top: 10px;
+}
+
+.content-right > section > h2 > a {
+    margin: 10px 0;
+}
+
+.content-right  section .content-right-img {
+    width: 300px;
+    height: 200px;
+}
+

@@ -1,0 +1,221 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.text {
+    color: #fff;
+    font-size: 1.3rem;
+    font-weight: 300;
+    line-height: 1.4;
+    padding: 10px 0;
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+}
+
+.sub-title {
+    color: #fff;
+    font-size: 1.7rem;
+    padding: 10px 0;
+    font-weight: 400;
+}
+
+body {
+    font-size: 62.5%;
+    font-family: sans-serif ;
+    background-color: black;
+}
+
+footer #footer {
+  width: 100%;
+  height: 500px;
+  border: 3px solid #000;
+  display: flex;
+  border-bottom: 1px solid #333 ;
+}
+
+#footer .footer-container {
+    width: 80%;
+    height: 300px;
+    margin: 100px 60px 30px 150px ;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-around ;
+}
+.footer-container .box {
+    padding: 20px;
+}
+
+/* Exclusive */
+.footer-container .exclusive {
+    display: flex;
+    flex-direction: column;
+}
+
+.footer-container .exclusive h2 {
+    color: #fff;
+    font-size: 2.3rem;
+    padding: 10px 0; 
+}
+
+.footer-container .exclusive .exclusive-text {
+    padding: 10px 0 30px;
+}
+
+.input-icon {
+    padding: 5px 20px;
+    border: 2px solid #fff;
+    border-radius: 5px;
+}
+
+.input-icon input[type="mail"] {
+    color: #fff;
+    font-size: 1.2rem;
+    padding: 10px  0;
+    outline: none;
+    border: none;
+    background-color: transparent;
+}
+
+.input-icon button {
+    color: #fff;
+    font-size: 1.2rem;
+    padding: 9px 0px;
+    border: none;
+    background-color: transparent;
+}
+
+.input-icon button:hover {
+    cursor: pointer;
+}
+
+/* support */
+
+.input-icon .support {
+    display: flex;
+    flex-direction: column;
+}
+
+.support > h3 {
+  margin-top: 10px;
+}
+
+/* account */
+.input-icon .account {
+    display: flex;
+    flex-direction: column;
+}
+
+.account > h3 {
+    margin-top: 25px;
+}
+/* quick link */
+.input-icon .quick-link {
+    display: flex;
+    flex-direction: column;
+}
+
+.quick-link > h3 {
+    margin-top: 30px;
+}
+/* download app */
+.input-icon .download-app {
+    display: flex;
+    flex-direction: column;
+}
+
+.download-app > h3 {
+    margin-top: 35px;
+}
+
+.download-app .sub-text {
+    color: #b0b0b0;
+    font-size: 0.8rem;
+    margin: 10px 0;
+}
+/* QR-img */
+.download-app .qr-img {
+    width: 110px;
+    height: 115px;
+}
+
+.download-app .qr-img:hover {
+    cursor: pointer;
+}
+
+.download-app .link-download {
+    display: flex;
+}
+
+.download-app .link-download .sub-link-download {
+    display: flex;
+    flex-direction: column;
+    padding: 0 5px 5px;
+}
+
+.link-download .sub-link-download a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 5px 5px;
+}
+
+.sub-link-download a .app-name {
+    font-size: 1.2rem;
+}
+
+/* google-play */
+.google-play {
+    padding: 5px 5px 0;
+    display: flex;
+    border: 1px solid #fff;
+    border-radius: 3px;
+    margin-bottom: 5px;
+}
+
+.sub-link-download .google-play-img {
+    width: 30px;
+    height: 35px;
+    margin: 5px 10px 0 5px;
+    margin-bottom: 5px;
+}
+.sub-link-download .google-play-img:hover {
+    cursor: pointer;
+}
+/* apple */
+.apple {
+    padding-top: 5px;
+    display: flex;
+    border: 1px solid #fff;
+    border-radius: 5px;
+}
+
+.apple .apple-img {
+    width: 50px;
+    height: 50px;
+}
+
+.apple .apple-img:hover {
+    cursor: pointer;
+}
+
+ /* social-list */
+ .download-app .social-list {
+    margin-top: 25px;
+ }
+.download-app .social-list a {
+    color: #fff;
+    font-size: 1.6rem;
+    padding: 0 5px ;
+}
+
+/* coppyright */
+.coppyright {
+    color: #333;
+    font-size: 1.4rem;
+    text-align: center;
+    margin: 10px 0;
+}
