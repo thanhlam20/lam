@@ -1,0 +1,11 @@
+.box {
+    width: 200px;
+    height: 150px;
+    border: 1px solid red;
+    overflow: auto;
+}
+
+p {
+    width: 500px;
+    background-color: aqua;
+}

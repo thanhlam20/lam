@@ -1,0 +1,345 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-size: 62.5%;
+    font-family: sans-serif;
+}
+
+/* common */
+.section-container .products {
+    width: 23%;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+img {
+    width: 100%;
+    height: 250px;
+    border-radius: 10px;
+}
+
+.actions-icon {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    font-size: 1.2rem;
+}
+
+.fa-heart, .fa-eye {
+    width: 35px;
+    height: 35px;
+    background-color: #f5f5f5;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.actions-icon .fa-regular:hover {
+    background-color: rgb(246, 147, 147);
+    cursor: pointer;
+}
+
+h2 {
+    font-size: 1.3rem;
+    margin: 10px 0;
+    font-weight: 400;
+}
+
+h2:hover {
+    cursor: pointer;
+}
+
+.rating {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 5px;
+}
+
+.product-price {
+    font-size: 1.4rem;
+    color: rgb(235, 101, 101);
+    font-weight: 500;
+}
+
+.fa-star {
+color: orange;
+font-size: 0.8rem;
+margin-top: 5px;
+}
+
+.rating .fa-star-half-stroke {
+    color: orange;
+    font-size: 0.8rem;
+    margin-top: 5px;
+}
+
+.review-count {
+    font-size: 1rem;
+    color: gray;
+    margin-left: 5px;
+}
+
+.new-item {
+    color: white;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background-color: green;
+    padding: 5px 10px;
+    font-size: 0.8rem;
+    font-style: italic;
+    border-radius: 5px;
+    font-weight: 300;
+}
+
+.add-to-cart {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.add-to-cart {
+    display: none;
+    color: #fff;
+    width: 100%;
+    height: 40px;
+    font-size: 1rem;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.687);
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    border-radius: 3px;
+    transition: all 0.3s ease;
+}
+
+.add-to-cart:hover {
+    background-color: rgba(235, 170, 170, 0.909);
+    cursor: pointer;
+}
+.rating:hover {
+    cursor: pointer;
+}
+/* end common */
+
+.main {
+    width: 80%;
+    margin: 0 auto;
+}
+
+/* header */
+.header-container {
+    margin-bottom: 10px;
+}
+.title {
+    display: flex ;
+    flex-direction: row;
+    align-items: center;
+    margin: 10px 0;
+}
+
+.title > span {
+    width: 15px;
+    height: 40px;
+    background-color: red;
+    border-radius: 5px;
+    margin-right: 10px;
+}
+
+.title > p {
+    color: red;
+    font-size: 1.2rem;
+}  
+
+.header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.header h1 {
+    font-size: 2.4rem;
+    font-weight: 500;
+}
+
+.header .arrow {
+    display: flex;
+    flex-direction: row;
+    font-size: 1.5rem;
+    gap: 10px;
+}
+
+.arrow .fa-arrow-left {
+    width: 50px;
+    height: 50px;
+    background-color: #f5f5f5;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;;
+}
+
+.arrow .fa-arrow-right {
+    width: 50px;
+    height: 50px;
+    background-color: #f5f5f5;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+}
+
+.header .fa-solid:hover {
+    color: white;
+    background-color: rgb(177, 96, 96);
+    cursor: pointer;
+}
+
+/* section-products */
+.section-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-bottom: 30px;
+}
+
+/* camera */
+.products .product-camera {
+    position: relative;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.product-camera:hover .add-to-cart {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+
+/* laptop */
+.products .product-laptop {
+    position: relative;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.product-laptop:hover .add-to-cart {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+/* gamepad */
+.products .product-gamepad {
+    position: relative;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.product-gamepad:hover .add-to-cart {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* car */
+.products .product-car {
+    position: relative;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.product-car:hover .add-to-cart {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* flycam */
+.products .product-flycam {
+    position: relative;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.product-flycam:hover .add-to-cart {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* panasonic */
+.products .product-panasonic {
+    position: relative;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.product-panasonic:hover .add-to-cart {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* samsung */
+.products .product-samsung {
+    position: relative;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.product-samsung:hover .add-to-cart {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+/* tivi lg */
+.products .product-lg {
+    position: relative;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.product-lg:hover .add-to-cart {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* footer */
+footer {
+    text-align: center;
+}
+
+footer button {
+    background-color: red;
+    border: none;
+    padding: 15px 30px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+footer button a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 1.3rem;
+    font-weight: 400;
+}

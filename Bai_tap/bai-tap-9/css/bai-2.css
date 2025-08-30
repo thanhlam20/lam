@@ -1,0 +1,367 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+ body {
+    font-size: 62.5%;
+    font-family: sans-serif;
+}
+
+/* common */
+
+.sale-percent {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background-color: red;
+    color: #fff;
+    padding: 5px 10px;
+    border-radius: 4px;
+    font-size: 1rem;
+    font-weight: 300;
+}
+
+.actions-icon .fa-heart,
+.actions-icon .fa-eye {
+    background-color: #f5f5f5;
+    width: 30px;
+    height: 30px;
+    font-size: 1rem;
+    border-radius: 50%;
+    cursor: pointer;
+    border-radius: 50%;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+}
+
+.actions-icon .fa-heart:hover,
+.actions-icon .fa-eye:hover {
+    background-color: rgb(221, 122, 122);
+    color: #fff;
+    cursor: pointer;
+}
+.actions-icon {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+h2 {
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin: 15px 0;
+}
+
+.rating .fa-star {
+    font-size: 1rem;
+    margin: 10px 0;
+    color: orange;
+}
+
+.rating .review-count {
+    color: #999;
+    font-size: 1rem;
+    margin-left: 12px;
+}
+
+.product-price {
+    font-size: 1.3rem;
+    font-weight: 500;
+    color: #c27579;
+}
+
+.product-price del {
+    color: #999;
+    font-size: 1.2rem;
+    margin-left: 10px;
+}
+.add-to-cart { 
+    display: none;
+    color: #fff;
+    width: 298px;
+    height: 40px;
+    font-size: 1rem;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.909);
+    position: absolute;
+    bottom: 116px;
+    left: 0;
+    border-radius: 3px;
+}
+
+
+/*  */
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+}
+
+/* .logo */
+
+.logo {
+    color: red;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    font-size: 1.6rem;
+    line-height: 50px;
+}
+
+.logo .logo-red {
+    padding: 25px 10px;
+    background-color: red;
+    display: inline-block;
+    margin-right: 10px;
+    border-radius: 4px;
+}
+
+/* title */
+.title {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    position: relative;
+}
+
+.title h1 {
+    font-size: 3rem;
+    padding: 20px 0;
+    font-weight: 500;
+    letter-spacing: 5px;
+}
+
+/* title-time */
+.title-times {
+    display: flex;
+    align-items: center;
+    font-size: 1.6rem;
+    font-weight: 500;
+    position: relative;
+}
+
+.title-times .time-text {
+    font-size: 1rem;
+}
+
+.title-times .number {
+    font-size: 2.7rem;
+    font-weight: 700;
+}
+
+.title-times .time-days {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}   
+
+.time-days > span:last-child {
+    color: red;
+    font-size: 2.5rem;
+    position: absolute;
+    top: 12px;
+    left: 60px;
+}
+
+.time-hours {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    margin: 0 40px;
+}
+
+.time-hours > span:last-child {
+    color: red;
+    font-size: 2.5rem;
+    position: absolute;
+    top: 12px;
+    left: 59px;
+}
+
+.time-minutes {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    margin-right: 20px;
+}
+
+.time-minutes > span:last-child {
+    color: red;
+    font-size: 2.5rem;
+    position: absolute;
+    top: 12px;
+    left: 53px;
+}
+
+.time-seconds {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+.arrow {
+    width: 112px;
+    margin-left: 100px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.arrow i {
+    font-size: 2rem;
+    color: #000;
+    cursor: pointer;
+}
+
+.arrow i:hover {
+    background-color: rgb(209, 163, 163);
+    cursor: pointer;
+}
+
+.arrow .fa-arrow-left {
+    width: 50px;
+    height: 50px;
+    padding-top: 10px;
+    background-color: #f5f5f5;
+    border-radius: 50%;
+    display: block;
+}
+
+.arrow .fa-arrow-right {
+    width: 50px;
+    height: 50px;
+    padding-top: 10px;
+    background-color: #f5f5f5;
+    border-radius: 50%;
+    display: block;
+}
+
+/* section-box*/
+
+.section-box {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+    gap: 30px ;
+}
+
+/* .product-ps5 */
+.section-box .product-ps5 {
+    border-radius: 4px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    cursor: pointer;
+}
+
+.product-ps5 .ps5-img:hover .add-to-cart {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.product-ps5 img {
+    width: 300px;
+    height: 300px;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+
+/* .product-keyboard */
+.product-keyboard {
+    border-radius: 4px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    cursor: pointer;
+}
+
+.product-keyboard img {
+    width: 300px;
+    height: 300px;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.product-keyboard .keyboard-img:hover .add-to-cart {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* .product-pcgaming */
+.product-pcgaming {
+    border-radius: 4px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    cursor: pointer;
+}
+.product-pcgaming img {
+    width: 300px;
+    height: 300px;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.product-pcgaming .product-pcgaming-img:hover .add-to-cart {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* product-iphone */
+.product-iphone {
+    border-radius: 4px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    cursor: pointer;
+}
+.product-iphone img {
+    width: 300px;
+    height: 300px;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.product-iphone .product-iphone-img:hover .add-to-cart {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* footer */
+footer {
+    text-align: center;
+}
+footer button {
+    background-color: red;
+    border: none;
+    padding: 15px 30px;
+    border-radius: 4px;
+    margin: 100px 0 0;
+    cursor: pointer;
+}
+footer button a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 1.3rem;
+    font-weight: 400;
+}
+

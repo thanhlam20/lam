@@ -45,6 +45,7 @@ footer #footer {
     flex-direction: row;
     flex-wrap: nowrap;
     justify-content: space-around ;
+    align-items: flex-start;
 }
 .footer-container .box {
     padding: 20px;
@@ -100,9 +101,9 @@ footer #footer {
     flex-direction: column;
 }
 
-.support > h3 {
+/* .support > h3 {
   margin-top: 10px;
-}
+} */
 
 /* account */
 .input-icon .account {
@@ -110,27 +111,27 @@ footer #footer {
     flex-direction: column;
 }
 
-.account > h3 {
+/* .account > h3 {
     margin-top: 25px;
-}
+} */
 /* quick link */
 .input-icon .quick-link {
     display: flex;
     flex-direction: column;
 }
 
-.quick-link > h3 {
+/* .quick-link > h3 {
     margin-top: 30px;
-}
+} */
 /* download app */
 .input-icon .download-app {
     display: flex;
     flex-direction: column;
 }
 
-.download-app > h3 {
+/* .download-app > h3 {
     margin-top: 35px;
-}
+} */
 
 .download-app .sub-text {
     color: #b0b0b0;

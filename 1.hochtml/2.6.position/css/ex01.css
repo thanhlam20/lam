@@ -1,0 +1,45 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 2000px;
+}
+
+.box {
+    width: 500px;
+    height: 600px;
+    margin: 0 auto;
+    border: 1px solid red;
+    position: absolute;
+    background-color: aqua;
+}
+
+.item {
+    width: 200px;
+    height: 100px;
+    padding: 30px;
+    background-color: green;
+    text-align: center;
+}
+
+.item:nth-child(1) {
+position: relative;
+bottom: -20px;
+}
+
+.item:nth-child(3) {
+    background-color: red;
+    position: relative;
+    left: 20px;
+    bottom: -30px;
+}
+.item:nth-child(2) {
+    background-color: yellow;
+    position: fixed;
+    /* width: auto;
+    height: auto; */
+    inset: 1;
+}

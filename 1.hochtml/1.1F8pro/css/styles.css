@@ -2,7 +2,7 @@ body {
     font-family: sans-serif;
     }
 
-.highlight {
+/* .highlight {
     font-size: 50px;
     font-weight: 700;
     color: transparent;
@@ -10,4 +10,8 @@ body {
     background: linear-gradient(90deg, rgba(131, 58, 180, 1) 0%, rgba(253, 29, 29, 1) 22%, rgba(252, 176, 69, 0.92) 62%);
     background-clip: text;
     -webkit-background-clip: text;
+} */
+
+h2 + h2 {
+    color: red;
 }

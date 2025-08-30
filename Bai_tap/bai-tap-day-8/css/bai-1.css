@@ -81,6 +81,7 @@ body {
 
 #nav-box .nav-list {
    margin: 0 30px;
+    border-bottom: 1px solid transparent;
 }
 
 #nav-box .nav-list a {
