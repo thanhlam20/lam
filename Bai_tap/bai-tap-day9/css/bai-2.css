@@ -11,6 +11,14 @@
 
 /* common */
 
+img {
+    width: 100%;
+    height: 250px;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
 .sale-percent {
     position: absolute;
     top: 10px;
@@ -82,22 +90,25 @@ h2 {
     margin-left: 10px;
 }
 .add-to-cart { 
+    width: 100%;
+    height: 40px;
     display: none;
     color: #fff;
-    width: 298px;
-    height: 40px;
     font-size: 1rem;
     align-items: center;
     justify-content: center;
     background-color: rgba(0, 0, 0, 0.909);
     position: absolute;
-    bottom: 116px;
+    bottom: 0;
     left: 0;
     border-radius: 0 0 3px 3px;
 }
 
+.box-img {
+    position: relative;
+}
 
-/*  */
+/* end common */
 
 .container {
     width: 80%;
@@ -261,20 +272,13 @@ h2 {
     flex-direction: column;
     position: relative;
     cursor: pointer;
+    display: flex;
 }
 
 .product-ps5 .ps5-img:hover .add-to-cart {
     display: flex;
     align-items: center;
     justify-content: center;
-}
-
-.product-ps5 img {
-    width: 250px;
-    height: 250px;
-    border: 2px solid #ccc;
-    border-radius: 4px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 
@@ -286,15 +290,6 @@ h2 {
     position: relative;
     cursor: pointer;
 }
-
-.product-keyboard img {
-    width: 250px;
-    height: 250px;
-    border: 2px solid #ccc;
-    border-radius: 4px;
-   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-}
-
 .product-keyboard .keyboard-img:hover .add-to-cart {
     display: flex;
     align-items: center;
@@ -308,13 +303,6 @@ h2 {
     flex-direction: column;
     position: relative;
     cursor: pointer;
-}
-.product-pcgaming img {
-    width: 250px;
-    height: 250px;
-    border: 2px solid #ccc;
-    border-radius: 4px;
-   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 .product-pcgaming .product-pcgaming-img:hover .add-to-cart {
@@ -330,13 +318,6 @@ h2 {
     flex-direction: column;
     position: relative;
     cursor: pointer;
-}
-.product-iphone img {
-    width: 250px;
-    height: 250px;
-    border: 2px solid #ccc;
-    border-radius: 4px;
-   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 .product-iphone .product-iphone-img:hover .add-to-cart {
