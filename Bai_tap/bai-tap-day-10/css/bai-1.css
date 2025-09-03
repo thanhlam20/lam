@@ -39,7 +39,7 @@ body {
     padding: 0 4px;
 }
 
-.box input:valid + label,
+.box input:focus + label,
 .box input:not(:placeholder-shown) + label {
     top: 0;
     font-size: 1.3rem;
