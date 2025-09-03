@@ -247,12 +247,11 @@ h2 {
 /* section-box*/
 
 .section-box {
-    width: 100%;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     flex-wrap: nowrap;
-    gap: 30px ;
+    gap: 20px ;
 }
 
 /* .product-ps5 */
@@ -271,8 +270,8 @@ h2 {
 }
 
 .product-ps5 img {
-    width: 300px;
-    height: 300px;
+    width: 250px;
+    height: 250px;
     border: 2px solid #ccc;
     border-radius: 4px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
@@ -289,8 +288,8 @@ h2 {
 }
 
 .product-keyboard img {
-    width: 300px;
-    height: 300px;
+    width: 250px;
+    height: 250px;
     border: 2px solid #ccc;
     border-radius: 4px;
    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
@@ -311,8 +310,8 @@ h2 {
     cursor: pointer;
 }
 .product-pcgaming img {
-    width: 300px;
-    height: 300px;
+    width: 250px;
+    height: 250px;
     border: 2px solid #ccc;
     border-radius: 4px;
    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
@@ -333,8 +332,8 @@ h2 {
     cursor: pointer;
 }
 .product-iphone img {
-    width: 300px;
-    height: 300px;
+    width: 250px;
+    height: 250px;
     border: 2px solid #ccc;
     border-radius: 4px;
    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
