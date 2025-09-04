@@ -52,6 +52,12 @@ h2 {
     font-size: 1.3rem;
     margin: 10px 0;
     font-weight: 400;
+    display: -webkit-box;
+    line-clamp: 1;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 h2:hover {
