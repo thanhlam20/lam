@@ -1,0 +1,489 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    outline: none;
+}
+
+html {
+    font-size: 62.5%;
+    font-family: sans-serif;
+}
+
+.landing {
+    width: 100%;
+    height: 100%;
+    background: url(../img/landing-background.jpg) no-repeat 0;
+    background-size: cover;
+    position: fixed;
+}
+
+.landing-decoration {
+    width: 64%;
+    height: 140%;
+    border-radius: 50%;
+    background: url(../img/dot-texture.png) repeat 0 0 #fff ;
+    position: absolute;
+    top: -20%;
+    right: -32%;
+    pointer-events: none;
+}
+
+.landing-info {
+    width: 482px;
+    position: absolute;
+    top: 16%;
+    left: 18%;
+}
+
+.logo {
+    display: flex;
+    justify-content: center;
+}
+
+#logo-vikinger {
+  width: 100px;
+  height: 100px;
+}
+
+.landing-info .landing-sub-title {
+    color: #fff;
+    text-align: center;
+    font-size: 2.4rem;
+    font-weight: 400;
+    margin-top: 10px;
+    text-transform: uppercase;
+}
+
+.landing-info .landing-title {
+    color: #fff;
+    font-size: 10rem;
+    font-weight: 900;
+    position: relative;
+    top: -10px;
+    text-align: center;
+    text-transform: uppercase;
+    font-family: system-ui, sans-serif;
+}
+
+.landing-info .landing-text {
+    color: #fff;
+    text-align: center;
+    font-size: 1.2rem;
+}
+
+.landing-info .tab-switch {
+    margin: 90px;
+    display: flex;
+    justify-content: center;
+}
+/* tab-swicth */
+/* tab-swicth login */
+.tab-switch .tab-switch-btn-login {
+    color: #fff;
+    width: 180px;
+    height: 54px;
+    padding: 0 30px;
+    font-size: 1.8rem;
+    line-height: 54px;
+    text-align: center;
+    border: 1px solid #fff;
+    border-top-left-radius: 12px;
+    border-bottom-left-radius: 12px;
+    display: block;
+    background-color: #ababab52;
+    font-weight: 700;
+}
+
+.tab-switch .tab-switch-btn-login:hover:hover {
+    color: #000;
+    background-color: #fff;
+    cursor: pointer;
+}
+
+#tab-switch-btn-login:checked + #tab-login {
+    right: 0;
+    visibility: visible;
+    opacity: 1;
+}
+
+/* tab-swicth register */
+.tab-switch .tab-switch-btn-register {
+    color: #fff;
+    width: 180px;
+    height: 54px;
+    font-size: 1.8rem;
+    line-height: 54px;
+    text-align: center;
+    border: 1px solid #fff;
+    border-top-right-radius: 12px;
+    border-bottom-right-radius: 12px;
+    display: block;
+    background-color: #ababab52;
+    font-weight: 700;
+}
+
+.tab-switch .tab-switch-btn-register:hover {
+    color: #000;
+    background-color: #fff;
+    cursor: pointer;
+}
+
+#tab-switch-btn-register:checked + #tab-register {
+    right: 0;
+    visibility: visible;
+    opacity: 1;
+}
+
+/* end tab-swicth */
+/*  */
+.landing-form {
+    width: 510px;
+    height: 100%;
+    position: absolute;
+    right: 13%;
+}
+
+/* login */
+.landing-form .form-box-login {
+    width: 450px;
+    background-color: #fff;
+    padding: 64px;
+    margin-top: 200px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3) ;
+    opacity: 0;
+    z-index: 1;
+    position: absolute;
+    right: -150px;
+    transition: all 0.6s ease-in-out 0s;
+    transform: translate(0px, 0px);
+    visibility: hidden;
+    display: block;
+}
+
+.form-box-decoration {
+    position: absolute;
+    top: -50px;
+    left: -100px;
+}
+
+.form-box-title {
+    color: #413f3f;
+    text-align: center;
+    font-size: 2.5rem;
+}
+
+.form {
+    width: 100%;
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+}
+
+.form-box-login .form-row {
+    width: 100%;
+}
+
+.form-input {
+    position: relative;
+}
+
+.form-input label {
+    color: #8f8e8e;
+    font-size: 1.7rem;
+    position: absolute;
+    top: 50%;
+    left: 10px;
+    padding: 0 4px;
+    transition: 0.3s ease;
+    transform: translateY(-50%);
+    pointer-events: none;
+    background: #fff;
+}
+
+input[type=text], 
+input[type=password] {
+    width: 100%;
+    height: 50px;
+    border: 1px solid #8e8e8e;
+    border-radius: 10px;
+    padding: 0 14px;
+    background: #fff;
+    outline: none;
+}
+
+.form-input input:focus + label,
+.form-input input:not(:placeholder-shown) + label{
+    color: #989898;
+    top: 0;
+    font-size: 1rem;
+}
+
+.form-input input:focus {
+    border: 1px solid blue;
+}
+
+
+.form-row + .form-row {
+    margin-top: 20px;
+}
+
+.form-row.space-between  {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+}
+
+.form-row.space-between .form-item {
+    display: flex;
+}
+
+.checkbox-box label::before {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    border: 1px solid #8686869e;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.checkbox-wrap {
+    position: relative;
+}
+
+.checkbox-wrap input[type=checkbox] {
+   opacity: 0;
+}
+
+.checkbox-box  label {
+    color: #4b4b4b;
+    padding-left: 30px;
+    font-size: 1.4rem;
+    font-weight: 700;
+    line-height: 20px;
+    cursor: pointer;
+}
+
+.checkbox-wrap .fa-xmark {
+    color: #fff;
+    font-size: 2rem;
+    width: 20px;
+    height: 20px;
+    background-color: #00c7d9;
+    position: absolute;
+    top: 1px;
+    left: 14px;
+    display: none;
+    border-radius: 5px;
+}
+
+.checkbox-wrap input[type=checkbox]:checked ~ .fa-xmark {
+    display: block;
+}
+
+.form-item .form-link {
+    color: #adafca;
+    font-size: 1.4rem;
+    text-decoration: none;
+    font-weight: 700;
+    line-height: 20px;
+}
+
+.form-item a:hover {
+    color: #00c7d9;
+}
+
+.form-item .btn {
+    color: #fff;
+    width: 100%;
+    height: 50px;
+    line-height: 50px;
+    font-size: 1.3rem;
+    display: inline-block;
+    background-color: #615dfa;
+    border: 0;
+    border-radius: 10px;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.lined-text {
+    font-size: 1.4rem;
+    margin-top: 40px;
+    text-align: center;
+    position: relative;
+    background-color: #fff;
+}
+
+.lined-text::after {
+    content: "";
+    width: 70px;
+    height: 1px;
+    background-color: #eaeaf5;
+    position: absolute;
+    top: 9px;
+    right: 0;
+}
+
+.lined-text::before {
+    content: "";
+    width: 70px;
+    height: 1px;
+    background-color: #eaeaf5;
+    position: absolute;
+    top: 9px;
+    left: 0;
+}
+
+.social-links {
+    margin-top: 30px;
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+}
+
+.social-links a {
+    color: #fff;
+    font-size: 2rem;
+    border-radius: 5px;
+    padding: 5px;
+}
+
+.social-links a:first-child {
+    background-color: blue;
+}
+.social-links a:nth-child(2) {
+    background-color: #1abcff;
+}
+
+.social-links a:nth-child(3){
+    background-color: #7b5dfa;
+}
+
+.social-links a:last-child {
+    background-color: red;
+}
+
+/* register */
+
+.form-box-register {
+    width: 510px;
+    background-color: #fff;
+    padding: 64px;
+    margin-top: 200px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    opacity: 0;
+    z-index: 1;
+    position: absolute;
+    right: -150px;
+    transition: all 0.6s ease-in-out 0s;
+    transform: translate(0px, 0px);
+    visibility: hidden;
+    display: block;
+}
+
+.checkbox-wrap .register-xmark {
+    width: 21px;
+    height: 21px;
+    position: absolute;
+    top: 16px;
+    left: 1px;
+}
+
+.form-box-register .form-text {
+    color: #3e3f5e;
+    margin-top: 30px;
+    font-size: 1.4rem;
+    line-height: 1.6;
+}
+
+.form-box-register .form-text a {
+    color: #00c7d9;
+    text-decoration: none;
+}
+
+.form-box-register .btn.btn-register {
+    background-color: #00c7d9;
+}
+
+/*  */
+
+@media screen and (max-width: 1500px) {
+    .landing .landing-decoration {
+        display: none;
+    }
+
+    .landing-info {
+        position: absolute;
+        left: 15%;
+    }
+
+    .landing-form {
+        position: absolute;
+        right: 2%;
+    }
+
+}
+
+/*  */
+
+@media screen and (max-width: 1365px) {
+    .landing-info {
+        width: 482px;
+        position: absolute;
+        top: 3%;
+        left: 31%;
+        z-index: 3;
+        }
+
+        .landing-info .landing-text {
+            display: none;
+        }
+
+        .landing-info .tab-switch {
+            position: absolute;
+            margin: 20px 0;
+            bottom: -30%;
+            left: 16%;
+        }
+
+        .landing-form {
+        width: 100%;
+        position: static;
+        }
+
+        /* login */
+           .landing-form .form-box-login {
+            width: 450px;
+            background-color: #fff;
+            padding: 64px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgb(0 0 0 / 30%);
+            position: static;
+            margin: 400px auto;
+            display: block;
+            transition: none;
+        }
+
+        /* register */
+        .landing-form .form-box-register {
+            width: 450px;
+            background-color: #fff;
+            padding: 64px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgb(0 0 0 / 30%);
+            margin: 0 auto;
+            position: absolute;
+            top: 46%;
+            left: 6%;
+            display: block;
+            transition: none;
+        }
+}
