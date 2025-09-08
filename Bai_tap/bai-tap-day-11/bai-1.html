@@ -13,6 +13,21 @@
   <body>
     <div class="landing">
       <div class="landing-decoration"></div>
+      <input
+        type="radio"
+        name="tab-switch"
+        value="login"
+        id="tab-switch-login"
+        checked
+        hidden
+      />
+      <input
+        type="radio"
+        name="tab-switch"
+        id="tab-switch-register"
+        value="register"
+        hidden
+      />
       <!-- end .landing-decoration -->
       <div class="landing-info">
         <div class="logo">
@@ -28,27 +43,20 @@
         </p>
         <div class="tab-switch">
           <!-- tab-switch-login -->
-          <span>
-            <label class="tab-switch-btn-login" for="tab-switch-btn-login">Login</label>
-          </span>
+          <label class="tab-switch-btn-login" for="tab-switch-login">
+            Login
+          </label>
           <!-- tab-switch-register -->
-          <span>
-            <label  class="tab-switch-btn-register" for="tab-switch-btn-register">Register</label>
-          </span>
+          <label class="tab-switch-btn-register" for="tab-switch-register">
+            Register
+          </label>
         </div>
         <!-- end .tab-switch -->
       </div>
       <!-- end .landing-info -->
       <div class="landing-form">
         <!-- login -->
-         <input
-            type="radio"
-            name="tab-switch"
-            id="tab-switch-btn-login"
-            checked
-            hidden
-          />
-        <div id="tab-login" class="form-box-login">
+        <div class="form-box-login">
           <img
             class="form-box-decoration"
             src="./img/rocket.webp"
@@ -127,13 +135,7 @@
         <!-- end .form-box -->
         <!-- end login -->
         <!-- register -->
-         <input
-            type="radio"
-            name="tab-switch"
-            id="tab-switch-btn-register"
-            hidden
-          />
-        <div id="tab-register" class="form-box-register" >
+        <div class="form-box-register">
           <img
             class="form-box-decoration"
             src="./img/rocket.webp"
