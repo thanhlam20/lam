@@ -419,7 +419,7 @@ input[type=password] {
 
     .landing-info {
         position: absolute;
-        left: 15%;
+        left: 7%;
     }
 
     .landing-form {
@@ -453,6 +453,8 @@ input[type=password] {
         .landing-form {
         width: 100%;
         position: static;
+        display: flex;
+        flex-direction: column;
         }
 
         /* login */
@@ -463,8 +465,8 @@ input[type=password] {
             border-radius: 10px;
             box-shadow: 0 4px 10px rgb(0 0 0 / 30%);
             position: relative;
-            top: 70.5%;
-            left: 17%;
+            top: 81.5%;
+            left: 10%;
             margin: 0 auto;
             display: block;
         }
@@ -476,8 +478,8 @@ input[type=password] {
             border-radius: 10px;
             box-shadow: 0 4px 10px rgb(0 0 0 / 30%);
             position: absolute;
-            top: 49%;
-            left: 48%;
+            top: 53%;
+            left: 36%;
             display: block;
             /* transition: none; */
             }
