@@ -936,7 +936,7 @@ html {
     margin-top: 55px;
 }
 
-.dot {
+.radio-dot .dot {
     width: 6px;
     height: 6px;
     margin: 0 5px;
@@ -951,7 +951,7 @@ html {
     display: none;
 }
 
-input:checked + .dot {
+.radio-dot input:checked + .dot {
     background: #FD6038;
 }
 
