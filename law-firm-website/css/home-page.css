@@ -7,6 +7,7 @@
 html {
     font-size: 62.5%;
     font-family: Manrope, sans-serif;
+    width: 100%;
 
 }
 
@@ -206,7 +207,7 @@ html {
     height: 568px;
     position: absolute;
     top: 20%;
-    right: -6%;
+    right: 0;
 }
 
 .header-img-container .img-box {
@@ -266,6 +267,7 @@ html {
 }
 
 .about-section .about-container {
+    display: flex;
     width: 81.2%;
     margin: 0 auto;
 }
@@ -273,12 +275,15 @@ html {
 .about-section .about-container .about-content {
     display: flex;
     gap: 73px;
+    margin-bottom: 100px;
+
 }
 
 /* about-img-box */
 .about-container .about-content .about-img-box {
     width: 570px;
     height: 570px;
+    object-fit: cover;
     margin-top: 100px;
     position: relative;
 }
@@ -296,7 +301,7 @@ html {
 
 /* about-text */
 .about-content .about-texts {
-    width: 600px;
+    width: 51.28px;
     height: 570px;
     margin-top: 100px;
 }
