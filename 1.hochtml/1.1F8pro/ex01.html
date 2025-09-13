@@ -1,16 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="stylesheet" href="css/styles.css">
-</head>
-<body>
-    <p class="highlight">Hoc HTML CSS</p>
-    <h2>1</h2>
-    <h2>2</h2>
-    <h2>3</h2>
-    <h2>4</h2>
-</body>
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body>
+    <div class="faq-item">
+      <input type="checkbox" id="q1" />
+      <label for="q1" class="question">
+        <span>Câu hỏi 1</span>
+        <span class="arrow">▼</span>
+      </label>
+      <div class="answer">
+        Đây là câu trả lời cho câu hỏi 1. Lorem ipsum dolor, sit amet
+        consectetur adipisicing elit.<br> Ipsa architecto laboriosam nostrum ipsum
+        pariatur soluta voluptatibus quod qui<br> nesciunt eaque iusto, sit eius
+        corrupti, quis eum magni labore obcaecati. Voluptatem?
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <input type="checkbox" id="q2" />
+      <label for="q2" class="question">
+        <span>Câu hỏi 2</span>
+        <span class="arrow">▼</span>
+      </label>
+      <div class="answer">Đây là câu trả lời cho câu hỏi 2.</div>
+    </div>
+
+    <div
+      class="overflow-hidden transition-all duration-500 ease-in-out max-h-0 opacity-0 peer-checked:max-h-40 peer-checked:opacity-100 peer-checked:p-3"
+    >
+      Đây là câu trả lời dài dài dài...
+    </div>
+  </body>
 </html>

@@ -1,17 +1,33 @@
-body {
-    font-family: sans-serif;
-    }
-
-/* .highlight {
-    font-size: 50px;
-    font-weight: 700;
-    color: transparent;
-    background: #833AB4;
-    background: linear-gradient(90deg, rgba(131, 58, 180, 1) 0%, rgba(253, 29, 29, 1) 22%, rgba(252, 176, 69, 0.92) 62%);
-    background-clip: text;
-    -webkit-background-clip: text;
-} */
-
-h2 + h2 {
-    color: red;
+.faq-item input {
+    display: none;
+    /* ẩn checkbox */
 }
+
+.question {
+    display: flex;
+    justify-content: space-between;
+    cursor: pointer;
+    padding: 10px;
+    background: #eee;
+}
+
+.answer {
+        max-height: none;
+        opacity: 0;
+        transform: translateY(0);
+        transition: opacity 0.5s ease, transform 0.5s ease;
+        height: 0;
+        overflow: hidden;
+}
+
+.faq-item input:checked~.answer {
+    opacity: 1;
+    transform: translateY(0);
+    height: 500px;
+}
+
+.faq-item input:checked+.question .arrow {
+    transform: rotate(180deg);
+    transition: transform 0.2s;
+}
+
