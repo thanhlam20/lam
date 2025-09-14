@@ -676,6 +676,7 @@ p {
     flex-direction: column;
     justify-content: flex-start;
     gap: 24px;
+    cursor: pointer;
 }
 
 /*  */

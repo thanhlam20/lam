@@ -1,0 +1,263 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+    font-family: Manrope, sans-serif;
+    color: #0E1412;
+}
+
+/* common */
+
+.form-title {
+    font-size: 1.8rem;
+    font-weight: 600;
+}
+
+.name-box input {
+    width: 570px;
+    height: 70px;
+    padding: 0 15px;
+    color: #586863;
+    font-size: 1.8rem;
+    line-height: 30px;
+    border: 1px solid #BECCC7;
+}
+
+
+/* end common */
+/* main */
+
+.main {
+    /* width: 1440px; */
+}
+
+/* navigation */
+.main .navigation {
+    width: 100%;
+    background-color: #F8EBC9;
+    display: flex;
+}
+
+.main .navigation .nav-container {
+    width: 81.2%;
+    margin: 30px auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* logo nav */
+
+.main .navigation .nav-container .nav-logo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.nav-container .nav-logo>p {
+    color: #0E1412;
+    font-size: 1.4rem;
+    line-height: 30px;
+    font-family: "Roboto Slab";
+    display: inline-block;
+    text-align: center;
+    line-height: 1;
+}
+
+.nav-logo .logo-text {
+    font-size: 2.4rem;
+    font-weight: 700;
+}
+
+/* nav-menu */
+.nav-menu .menu-box {
+    display: flex;
+    padding: 16px 0;
+    gap: 40px;
+    font-size: 1.6rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 2.8rem;
+    margin-left: 220px;
+    position: relative;
+}
+
+.nav-menu .menu-box ul li {
+    list-style-type: none;
+}
+
+.menu-box li a svg {
+    display: inline-block;
+    margin-left: 6px;
+}
+
+.menu-box>li:nth-of-type(4) a {
+    color: #FD6038;
+}
+
+.menu-box .sub-nav-box {
+    position: relative;
+}
+
+/* sub-nav */
+.menu-box .sub-nav {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: -223%;
+    width: 185px;
+    height: 200px;
+    background-color: #fff;
+    z-index: 5;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    cursor: pointer;
+}
+
+.menu-box li:hover .sub-nav {
+    display: block;
+}
+
+.sub-nav>li a {
+    display: inline-block;
+    padding-right: 60px;
+    color: #586863;
+    font-size: 1.6rem;
+    line-height: 28px;
+    margin: 0 12px 12px 12px;
+    cursor: pointer;
+}
+
+.sub-nav>li:hover a {
+    color: #FD6038;
+}
+
+
+/* nav-tel */
+.nav-tel {
+    display: flex;
+    padding: 16px 0;
+    gap: 4px;
+    font-size: 1.6rem;
+    font-weight: 400;
+    line-height: 31px;
+    text-align: center;
+}
+
+.nav-tel .tel-number a {
+    text-align: center;
+    font-size: 2.2rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 30px;
+}
+
+/* end navigtion */
+
+.contact-section {
+    width: 100%;
+    display: flex;
+}
+
+.contact-section .contact-container {
+    width: 81.2%;
+    margin: 0 auto;
+    margin-top: 100px;
+}
+
+.contact-section .contact-container h1 {
+    font-family: "Roboto Slab";
+    font-size: 4.2rem;
+    font-weight: 700;
+    line-height: 52px;
+}
+
+.contact-section .contact-container p {
+    display: block;
+    width: 670px;
+    color: #586863;
+    font-size: 1.8rem;
+    line-height: 30px;
+    margin-bottom: 38px;
+}
+
+/* form-box */
+.form-container {
+    display: flex;
+    flex-direction: column;
+    height: 1086px;
+}
+
+.form-container .name-box {
+    display: flex;
+    gap: 30px;
+    justify-content: space-between;
+    margin-bottom: 30px;
+}
+
+.form-container .name-box .first-name {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    gap: 12px;
+}
+
+.form-container .name-box .last-name {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    gap: 12px;
+}
+
+/* services-box */
+.services-list {
+    display: flex;
+    gap: 30px;
+    justify-content: space-between;
+}
+
+.services label select {
+    color: #586863;
+    display: inline-block;
+    width: 570px;
+    height: 70px;
+    padding: 0 16px;
+    font-size: 1.8rem;
+    background-color: #fff;
+    border: 1px solid #BECCC7;
+    outline: none;
+}
+
+.lawyer label select {
+    color: #586863;
+    display: inline-block;
+    width: 570px;
+    height: 70px;
+    padding: 0 16px;
+    font-size: 1.8rem;
+    background-color: #fff;
+    border: 1px solid #BECCC7;
+    outline: none;
+}
+
+.services-list .services,
+.services-list .lawyer {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+/* message */
+.message textarea {
+    width: 100%;
+    height: 330px;
+    border: 1px solid #BECCC7;
+}
+
+.message textarea::placeholder {
+    font-size: 1.8rem;
+    color: #586863;
+}

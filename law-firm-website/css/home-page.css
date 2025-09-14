@@ -98,6 +98,8 @@ html {
     margin-left: 6px;
 }
 
+
+
 .menu-box > li:first-child a {
     color: #FD6038;
 }
@@ -1352,6 +1354,7 @@ html {
     flex-direction: column;
     justify-content: flex-start;
     gap: 24px;
+    cursor: pointer;
 }
 
 /*  */
