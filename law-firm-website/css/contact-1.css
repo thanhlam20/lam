@@ -29,11 +29,84 @@ html {
 
 
 /* end common */
+/* sidebar */
+.hamburger-box {
+    position: relative;
+    color: #fff;
+    font-size: 10px;
+    font-size: 1.8rem;
+    display: none;
+}
+
+.hamburger-box label>svg {
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+}
+
+.side-left {
+    position: fixed;
+    top: 0;
+    left: -250px;
+    width: 250px;
+    height: 100vh;
+    background: #222;
+    color: white;
+    padding: 2rem 1rem;
+    transition: left 0.4s ease;
+    z-index: 1000;
+    overflow-y: auto;
+}
+
+#sidebar:checked~.side-left {
+    left: 0;
+}
+
+.side-left ul li {
+    padding: 10px 0;
+    margin-bottom: 5px;
+}
+
+.side-left>ul li:hover {
+    color: #FD6038;
+    cursor: pointer;
+}
+
+.side-left .close {
+    position: absolute;
+    top: 5px;
+    right: 15px;
+    padding: 5px 10px;
+    background-color: #333;
+    border-radius: 5px;
+}
+
+.side-left .close:hover {
+    background-color: #FD6038;
+}
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.4s ease;
+    z-index: 900;
+}
+
+#menu-toggle:checked~.overlay {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+/* end sidebar */
+
 /* main */
 
-.main {
-    /* width: 1440px; */
-}
 
 /* navigation */
 .main .navigation {
@@ -58,7 +131,7 @@ html {
     align-items: center;
 }
 
-.nav-container .nav-logo>p {
+.nav-container .nav-logo > p {
     color: #0E1412;
     font-size: 1.4rem;
     line-height: 30px;
@@ -82,7 +155,6 @@ html {
     font-style: normal;
     font-weight: 400;
     line-height: 2.8rem;
-    margin-left: 220px;
     position: relative;
 }
 
@@ -93,10 +165,6 @@ html {
 .menu-box li a svg {
     display: inline-block;
     margin-left: 6px;
-}
-
-.menu-box>li:nth-of-type(4) a {
-    color: #FD6038;
 }
 
 .menu-box .sub-nav-box {
@@ -173,6 +241,7 @@ html {
     font-size: 4.2rem;
     font-weight: 700;
     line-height: 52px;
+    margin-bottom: 20px;
 }
 
 .contact-section .contact-container p {
@@ -188,14 +257,13 @@ html {
 .form-container {
     display: flex;
     flex-direction: column;
-    height: 1086px;
+    gap: 30px;
 }
 
 .form-container .name-box {
     display: flex;
     gap: 30px;
     justify-content: space-between;
-    margin-bottom: 30px;
 }
 
 .form-container .name-box .first-name {
@@ -251,13 +319,298 @@ html {
 }
 
 /* message */
-.message textarea {
+.message {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+.message > textarea {
     width: 100%;
     height: 330px;
+    color: #FD6038;
+    font-size: 1.8rem;
     border: 1px solid #BECCC7;
 }
 
-.message textarea::placeholder {
+/* btn */
+.form-container .form-btn-box {
+    display: flex;
+    justify-content: flex-end;
+}
+.form-container .form-btn {
     font-size: 1.8rem;
+    font-weight: 600;
+    display: block;
+    color: #fff;
+    padding: 15px 35px;
+    background-color: #FD6038;
+}
+
+/* footer-section */
+.footer-section {
+    color: #fff;
+    width: 100%;
+    display: flex;
+}
+
+.footer-section .footer-container {
+    width: 81.2%;
+    margin: 100px auto 0;
+    display: flex;
+    flex-direction: column;
+
+}
+/* map larger */
+
+.footer-section .footer-container .map {
+
+}
+
+/* contact & map */
+
+.footer-section .footer-container .footer-contact {
+    width: 100%;
+    height: auto;
+    display: flex;
+    gap: 80px;
+    border-bottom: 1px solid #313D39;
+    color: #fff;
+    display: none;
+}
+
+.footer-container .footer-contact h3 {
+    color: #fff;
+    font-size: 2rem;
+    font-weight: 700;
+    line-height: 30px;
+}
+
+.footer-container .footer-contact span {
+    color: #BECCC7;
+    font-size: 1.6rem;
+    line-height: 28px;
+}
+
+.footer-container .footer-contact .footer-group {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 24px;
+    cursor: pointer;
+}
+
+/*  */
+.footer-container .footer-social {
+    display: flex;
+    justify-content: space-between;
+    margin: 28px 0;
+}
+
+.footer-logo {
+    display: flex;
+    flex-direction: column;
+}
+
+/* logo */
+.footer-logo .footer-logo-box {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 12px;
+}
+
+.footer-logo-box > p {
+    width: 100px;
+    font-size: 1.4rem;
+    font-family: "Roboto Slab";
+    line-height: 14px;
+    display: inline-block;
+    text-align: center;
+    color: #0E1412;
+}
+
+.footer-logo .footer-text {
+    font-size: 2.4rem;
+    font-weight: 700;
+
+}
+
+.footer-logo .footer-logo-icon {
+    margin-left: 35px;
+    width: 31px;
+    height: 31px;
+    margin-bottom: 10px;
+}
+
+.img-white {
+    display: none;
+    margin-left: 35px;
+    width: 31px;
+    height: 31px;
+    margin-bottom: 10px;
+}
+
+/* social */
+.footer-social .social-group {
+    display: flex;
+    align-items: flex-end;
+    gap: 10px;
+    margin: 0 10px;
+}
+
+.footer-social .social-group span {
+    width: 36px;
+    height: 36px;
+    padding: 13px;
+    background-color: #0E1412;
+    cursor: pointer;
+}
+
+.footer-social .social-group span:hover {
+    background-color: #FD6038;
+    cursor: pointer;
+}
+
+.footer-logo .copy-right {
     color: #586863;
+    font-size: 1.4rem;
+    line-height: 24px;
+}
+
+/* breakpoints */
+
+@media (max-width: 1400px) { 
+    iframe {
+        width: 100%;
+    }
+    .form-container {
+        width: 100%;
+    }
+    .form-container .name-box {
+        width: 100%;
+        gap: 250px;
+        justify-content: flex-start;
+    }
+
+    .name-box input{
+        width: 173%;
+    }
+
+    .services-list {
+        width: 100%;
+        justify-content: flex-start;
+        gap: 320px;
+    }
+
+    .lawyer label select {
+        width: 202%;
+        
+    }
+    .services label select {
+       
+        width: 244%;
+        
+    }
+
+}
+
+@media (max-width: 1200px) {
+    .nav-menu .menu-box {
+            display: none;
+        }
+    
+    .main .navigation .nav-container .nav-logo {
+            display: none;
+        }
+    
+    .hamburger-box {
+            display: block;
+        }
+
+    /* .services label select { 
+        width: 464px;
+    }
+
+    .lawyer label select {
+        width: 464px;
+    }
+
+    .name-box input {
+        width: 464px;
+    } */
+
+}
+
+@media (max-width: 992px) {
+    .form-container .name-box {
+        flex-direction: column;
+        gap: 20px;
+
+    }
+
+    .name-box input {
+            width: 100%;
+    }
+
+    .services-list {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .services label select,
+    .lawyer label select {
+        width: 100%;
+    }
+
+    .contact-section .contact-container p {
+        width: 100%;
+    }
+}
+
+
+@media (max-width: 768px) {}
+
+@media (max-width: 576px) {
+    .map {
+        display: none;
+    }
+
+    .footer-section .footer-container .footer-contact {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .footer-section {
+        background-color: #0E1412;
+    }
+    
+    iframe {
+        width: 100%;
+        height: 190px;
+    }
+    
+    .form-container {
+        margin: 20px;
+    }
+
+    .footer-social .social-group span {
+        background-color: #313D39;
+    }
+
+    .footer-logo-box>p {
+        color: #fff;
+    }
+
+    .footer-container .footer-social {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .footer-logo .footer-logo-icon {
+        display: none;
+    }
+
+    .img-white {
+        display: flex;
+    }
 }

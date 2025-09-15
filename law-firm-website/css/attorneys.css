@@ -20,13 +20,13 @@ html {
 p {
     color: #586863;
     font-size: 1.8rem;
-    line-height: 1.6;
+    line-height: 1.8;
 }
 
 .member-bio-box ul {
     color: #586863;
     font-size: 1.8rem;
-    line-height: 1.6;
+    line-height: 1.8;
     list-style-type: disc;
     list-style-position: inside;
     padding-left: 0;
@@ -39,6 +39,81 @@ p {
 }
 
 /* end common */
+/* sidebar */
+.hamburger-box {
+    position: relative;
+    color: #fff;
+    font-size: 10px;
+    font-size: 1.8rem;
+    display: none;
+}
+
+.hamburger-box label>svg {
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+}
+
+.side-left {
+    position: fixed;
+    top: 0;
+    left: -250px;
+    width: 250px;
+    height: 100vh;
+    background: #222;
+    color: white;
+    padding: 2rem 1rem;
+    transition: left 0.4s ease;
+    z-index: 1000;
+    overflow-y: auto;
+}
+
+#sidebar:checked~.side-left {
+    left: 0;
+}
+
+.side-left ul li {
+    padding: 10px 0;
+    margin-bottom: 5px;
+}
+
+.side-left>ul li:hover {
+    color: #FD6038;
+    cursor: pointer;
+}
+
+.side-left .close {
+    position: absolute;
+    top: 5px;
+    right: 15px;
+    padding: 5px 10px;
+    background-color: #333;
+    border-radius: 5px;
+}
+
+.side-left .close:hover {
+    background-color: #FD6038;
+}
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.4s ease;
+    z-index: 900;
+}
+
+#menu-toggle:checked~.overlay {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+/* end sidebar */
 /* main */
 
 .main {
@@ -92,7 +167,6 @@ p {
     font-style: normal;
     font-weight: 400;
     line-height: 2.8rem;
-    margin-left: 220px;
     position: relative;
 }
 
@@ -278,7 +352,7 @@ p {
     flex-direction: column;
     gap: 18px;
 }
-
+/* cta section */
 .cta-section {
     width: 100%;
     height: 494px;
@@ -440,4 +514,80 @@ p {
     color: #BECCC7;
     font-size: 1.4rem;
     line-height: 24px;
+}
+
+/* breakpoints */
+
+@media (max-width: 1400px) {
+    .cta-section .cta-container {
+            width: 50.6%;
+        }
+}
+
+@media (max-width: 1200px) {
+    .nav-menu .menu-box {
+            display: none;
+        }
+    
+    .nav-logo {
+            display: none;
+        }
+    
+    .hamburger-box {
+            display: block;
+        }
+    .footer-section .footer-container .footer-contact {
+        flex-wrap: wrap;
+        height: auto;
+    }
+
+    .footer-container .footer-contact .footer-group {
+        margin-bottom: 20px;
+    }
+
+    .cta-section .cta-container {
+        width: 60.6%;
+     }
+
+}
+
+@media (max-width: 992px) {}
+
+
+@media (max-width: 768px) {
+    .cta-section .cta-container {
+            width: 73.6%;
+    }
+
+    .main .navigation .nav-container .nav-logo {
+        display: none;
+    }
+
+    .nav-menu .menu-box {
+        display: none;
+    }
+
+    .hamburger-box {
+        display: block;
+    }
+
+    .main .pro-file .profile-container {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+@media (max-width: 576px) {
+    .cta-section .cta-container {
+            width: 83.6%;
+        }
+
+    .footer-section .footer-container .footer-contact {
+        flex-direction: column;
+        gap: 0;
+    }
+    
+    .footer-section .footer-container {
+        margin-top: 50px;
+    }
 }
