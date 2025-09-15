@@ -329,6 +329,7 @@ html {
     top: 5px;
     right: -28px;
     z-index: 3;
+    
 }
 
 
@@ -343,6 +344,7 @@ html {
     top: 24%;
     right: 10%;
     z-index: 3;
+    cursor: pointer;
 }
 
 /* About-section */
@@ -1035,6 +1037,7 @@ html {
 
 .testimonial-content-box .testimonial-content {
     width: 310px;
+    margin: 10px 0 20px 10px;
 }
 
 .testimonial-item .testimonial-content > img {
