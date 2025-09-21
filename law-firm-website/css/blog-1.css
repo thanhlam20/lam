@@ -6,8 +6,13 @@
 
 html {
     font-size: 62.5%;
+    scroll-behavior: smooth;
+}
+
+body {
     font-family: Manrope, sans-serif;
-    color: #0E1412;
+    overflow-x: hidden;
+    overscroll-behavior-y: none;
 }
 
 /* common */
@@ -89,6 +94,7 @@ h3 {
     padding: 5px 10px;
     background-color: #333;
     border-radius: 5px;
+    cursor: pointer;
 }
 
 .side-left .close:hover {
@@ -105,10 +111,9 @@ h3 {
     opacity: 0;
     pointer-events: none;
     transition: opacity 0.4s ease;
-    z-index: 900;
+    z-index: 960;
 }
-
-#menu-toggle:checked~.overlay {
+#sidebar:checked~.overlay {
     opacity: 1;
     pointer-events: auto;
 }
@@ -125,6 +130,8 @@ h3 {
     width: 100%;
     background-color: #F8EBC9;
     display: flex;
+    position: fixed;
+    z-index: 100;
 }
 
 .main .navigation .nav-container {
@@ -190,7 +197,7 @@ h3 {
     top: 100%;
     left: -223%;
     width: 185px;
-    height: 200px;
+    height: auto;
     background-color: #fff;
     z-index: 5;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
@@ -250,7 +257,7 @@ h3 {
 .header-section .header-container {
     width: 81.2%;
     margin: 0 auto;
-    margin-top: 70px;
+    margin-top: 170px;
 }
 /* buttons-box */
 .header-section .header-container .buttons-box {
@@ -802,9 +809,9 @@ h3 {
 }
 
 /* breakpoints */
-@media (max-width: 1400px) {}
+@media (max-width: 1399.98px) {}
 
-@media (max-width: 1200px) {
+@media (max-width: 1199.98px) {
     .nav-menu .menu-box {
             display: none;
         }
@@ -825,7 +832,7 @@ h3 {
     }
 }
 
-@media (max-width: 992px) {
+@media (max-width: 991.98px) {
     .header-section .header-container {
         height: 400px;
     }
@@ -837,7 +844,11 @@ h3 {
 
 }
 
-@media (max-width: 768px) {
+@media (max-width: 767.98px) {
+    h1 {
+        font-size: 4rem;
+        line-height: 51px;
+    }
     .blog-list-container .blog-list {
         flex-direction: column;
         align-items: center;
@@ -899,31 +910,29 @@ h3 {
         display: none;
     }
 
+    .blog-list-section .blog-list-container {
+        align-items: center;
+    }
+
 }
 
-@media (max-width: 576px) {
-    h1 {
-        width: 400px;
+@media (max-width: 575.98px) {
+     h1 {
+        width: 100%;
+        font-size: 5.5rem;
     }
 
     .blog-section .blog-container {
         margin-top: 100px;
         
     }
-        .footer-section .footer-container .footer-contact {
+    .footer-section .footer-container .footer-contact {
             flex-direction: column;
             gap: 10px;
-        }
+    }
+
+    .cta-section .cta-container { 
+        width: 87%;
+    }
         
 }
-
-
-
-
-
-
-
-
-
-
-

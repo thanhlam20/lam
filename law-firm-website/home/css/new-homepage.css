@@ -1,0 +1,97 @@
+html {
+    font-size: 62.5%;
+    
+}
+
+body {
+    font-family: Manrope, sans-serif;
+    overflow-x: hidden;
+    overscroll-behavior-y: none;
+    scroll-behavior: smooth;
+    font-size: 1.8rem;
+    color: #0E1412;
+}
+
+
+/* main */
+.main {
+    max-width: 1600px;
+}
+
+/* nagavition */
+.navigation {
+    width: 100%;
+    background-color: #F8EBC9;
+    padding: 25px 0;
+    position: fixed;
+}
+
+.nav-box {
+    width: 81.25%;
+    max-width: 1400px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* side-bar */
+.side-bar {
+    display: none;
+}
+
+/* nav-logo */
+.nav-logo {
+    font-family: "Roboto Slab";
+    font-size: 1.4rem;
+    line-height: 1.4rem;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.logo-text {
+    font-size: 2.4rem;
+    font-weight: 700;
+}
+
+/* nav-menu */
+.menu {
+    min-width: 523px;
+    width: 600px;
+    padding: 15px 0;
+    display: flex;
+    /* justify-content: space-between; */
+    align-items: center;
+
+}
+
+.menu li a {
+    display: flex;
+    align-items: center;
+    padding: 0 15px;
+    text-align: center;
+    font-weight: 600;
+}
+
+.menu li a > img  {
+    width: 8px;
+    height: 4px;
+    margin-left: 5px;
+}
+
+.menu li:first-child a {
+    color: #FD6038;
+}
+
+.tel a {
+    font-size: 2.2rem;
+    font-weight: 700;
+}
+
+
+/* sub-nav */
+.sub-nav {
+    display: none;
+}

@@ -6,8 +6,13 @@
 
 html {
     font-size: 62.5%;
+    scroll-behavior: smooth;
+}
+
+body {
     font-family: Manrope, sans-serif;
-    color: #0E1412;
+    overflow-x: hidden;
+    overscroll-behavior-y: none;
 }
 
 /* common */
@@ -89,6 +94,7 @@ p {
     padding: 5px 10px;
     background-color: #333;
     border-radius: 5px;
+    cursor: pointer;
 }
 
 .side-left .close:hover {
@@ -105,10 +111,9 @@ p {
     opacity: 0;
     pointer-events: none;
     transition: opacity 0.4s ease;
-    z-index: 900;
+    z-index: 998;
 }
-
-#menu-toggle:checked~.overlay {
+#sidebar:checked~.overlay {
     opacity: 1;
     pointer-events: auto;
 }
@@ -125,11 +130,13 @@ p {
     width: 100%;
     background-color: #F8EBC9;
     display: flex;
+    position: fixed;
 }
 
 .main .navigation .nav-container {
     width: 81.2%;
-    margin: 30px auto;
+    margin: 0 auto;
+    padding: 25px 0;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -194,7 +201,7 @@ p {
     top: 100%;
     left: -223%;
     width: 185px;
-    height: 200px;
+    height: auto;
     background-color: #fff;
     z-index: 5;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
@@ -249,8 +256,8 @@ p {
 
 .main .pro-file .profile-container {
     width: 81.2%;
-    margin: 0 auto;
-    margin-top: 70px;
+    margin: 0 auto ;
+    margin-top: 170px;
     display: flex;
     gap: 30px;
     margin-bottom: 150px;
@@ -518,20 +525,20 @@ p {
 
 /* breakpoints */
 
-@media (max-width: 1400px) {
+@media (max-width: 1399.99px) {
     .cta-section .cta-container {
             width: 50.6%;
         }
 }
 
-@media (max-width: 1200px) {
+@media (max-width: 1199.98px) {
     .nav-menu .menu-box {
             display: none;
         }
-    
     .nav-logo {
-            display: none;
-        }
+        display: none;
+        visibility: hidden;
+    }
     
     .hamburger-box {
             display: block;
@@ -551,17 +558,15 @@ p {
 
 }
 
-@media (max-width: 992px) {}
+@media (max-width: 991.98px) {}
 
 
-@media (max-width: 768px) {
+@media (max-width: 767.98px) {
     .cta-section .cta-container {
             width: 73.6%;
     }
 
-    .main .navigation .nav-container .nav-logo {
-        display: none;
-    }
+   
 
     .nav-menu .menu-box {
         display: none;
@@ -577,7 +582,7 @@ p {
     }
 }
 
-@media (max-width: 576px) {
+@media (max-width: 575.98px) {
     .cta-section .cta-container {
             width: 83.6%;
         }

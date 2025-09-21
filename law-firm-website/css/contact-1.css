@@ -6,10 +6,14 @@
 
 html {
     font-size: 62.5%;
-    font-family: Manrope, sans-serif;
-    color: #0E1412;
+    scroll-behavior: smooth;
 }
 
+body {
+    font-family: Manrope, sans-serif;
+    overflow-x: hidden;
+    overscroll-behavior-y: none;
+}
 /* common */
 
 .form-title {
@@ -52,9 +56,9 @@ html {
     height: 100vh;
     background: #222;
     color: white;
-    padding: 2rem 1rem;
+    padding: 20px 10px;
     transition: left 0.4s ease;
-    z-index: 1000;
+    z-index: 999999999;
     overflow-y: auto;
 }
 
@@ -79,6 +83,7 @@ html {
     padding: 5px 10px;
     background-color: #333;
     border-radius: 5px;
+    cursor: pointer;
 }
 
 .side-left .close:hover {
@@ -95,10 +100,10 @@ html {
     opacity: 0;
     pointer-events: none;
     transition: opacity 0.4s ease;
-    z-index: 900;
+    z-index: 999;
 }
 
-#menu-toggle:checked~.overlay {
+#sidebar:checked~.overlay {
     opacity: 1;
     pointer-events: auto;
 }
@@ -113,11 +118,12 @@ html {
     width: 100%;
     background-color: #F8EBC9;
     display: flex;
+    position: fixed;
 }
 
 .main .navigation .nav-container {
     width: 81.2%;
-    margin: 30px auto;
+    margin: 25px auto;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -178,7 +184,7 @@ html {
     top: 100%;
     left: -223%;
     width: 185px;
-    height: 200px;
+    height: auto;
     background-color: #fff;
     z-index: 5;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
@@ -233,7 +239,7 @@ html {
 .contact-section .contact-container {
     width: 81.2%;
     margin: 0 auto;
-    margin-top: 100px;
+    margin-top: 170px;
 }
 
 .contact-section .contact-container h1 {
@@ -242,6 +248,7 @@ html {
     font-weight: 700;
     line-height: 52px;
     margin-bottom: 20px;
+    padding: 0 20px;
 }
 
 .contact-section .contact-container p {
@@ -251,6 +258,7 @@ html {
     font-size: 1.8rem;
     line-height: 30px;
     margin-bottom: 38px;
+    padding: 0 20px;
 }
 
 /* form-box */
@@ -514,7 +522,7 @@ html {
 
 }
 
-@media (max-width: 1200px) {
+@media (max-width: 1199.98px) {
     .nav-menu .menu-box {
             display: none;
         }
@@ -526,22 +534,9 @@ html {
     .hamburger-box {
             display: block;
         }
-
-    /* .services label select { 
-        width: 464px;
-    }
-
-    .lawyer label select {
-        width: 464px;
-    }
-
-    .name-box input {
-        width: 464px;
-    } */
-
 }
 
-@media (max-width: 992px) {
+@media (max-width: 991.98px) {
     .form-container .name-box {
         flex-direction: column;
         gap: 20px;
@@ -568,9 +563,9 @@ html {
 }
 
 
-@media (max-width: 768px) {}
+@media (max-width: 767.98px) {}
 
-@media (max-width: 576px) {
+@media (max-width: 575.98px) {
     .map {
         display: none;
     }
