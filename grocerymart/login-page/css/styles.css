@@ -1,0 +1,191 @@
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-family: Gordita, sans-serif;
+    overflow-x: hidden;
+    overscroll-behavior-y: none;
+    background-color: #F5F5F5;
+    font-size: 1.5rem;
+}
+
+.main {
+    width: 100%;
+    max-width: 1700px;
+    display: flex;
+    height: 100vh;
+}
+
+.main > a {
+    display: inline-block;
+    font-size: 2.2rem;
+    position: fixed;
+    height: auto;
+    margin: 20px;
+}
+
+.main > a:hover {
+    color: rgb(95, 92, 92);
+}
+
+.slogan-box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50%;
+}
+
+.slogan {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+}
+
+.slogan h1 {
+    font-size: 1.9rem;
+    font-weight: 500;
+    line-height: 26px;
+    text-align: center;
+}
+
+/* login-section */
+.login-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50%;
+    background-color: #fff;
+}
+
+.login-box {
+    display: flex;
+    flex-direction: column;
+   
+}
+
+.header {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    align-items: center;
+}
+
+.header-logo {
+    display: flex;
+    gap: 14px;
+    align-items: center;
+}
+
+.header-logo > span > a {
+    font-size: 2.2rem;
+    font-weight: 700;
+    line-height: 32px;
+}
+
+.greeting {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center ;
+}
+
+.greeting > span {
+    font-size: 30px;
+    font-weight: 500;
+    line-height: 44px;
+}
+
+.greeting > p {
+    max-width: 460px;
+    color: #9E9DA8;
+    font-weight: 500;
+    line-height: 24px;
+    text-align: center;
+}
+/* login-box */
+.login input {
+    font-size: 2rem;
+    width: 88%;
+    border: none;
+    outline: none;
+    padding: 15px 0;
+    margin: 0 10px;
+}
+
+.login {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    margin-top: 40px;
+}
+.login-email,
+.login-password {
+    width: 100%;
+    border: 1px solid #333;
+    display: flex;
+    align-items: center;
+    border-radius: 10px;
+    cursor: pointer;
+}
+.login-email > label,
+.login-password > label {
+    cursor: pointer;
+}
+
+.login input::placeholder {
+    font-size: 1.9rem;
+    font-weight: 500;
+}
+
+/* recovery-password */
+.recovery-password {
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 30px;
+}
+
+.recovery-password label span {
+    color: #9E9DA8;
+    cursor: pointer;
+}
+
+.recovery-password > a {
+    color: #0071DC;
+}
+/* login-btn */
+.login-btn {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+.login-btn button {
+    padding: 12px 0;
+    background-color: #FFB700;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    user-select: none;
+}
+
+.login-btn button:last-child {
+    border: 1px solid #222;
+    background-color: #fff;
+    margin-bottom: 30px;
+}
+
+.footer-text {
+    display: flex;
+    justify-content: center;
+}
+.footer-text > p {
+    color: #9E9DA8;
+}
+.footer-text > p > a {
+    color: #0071DC;
+    text-align: center;
+    padding: 0 7px;
+}

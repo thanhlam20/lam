@@ -714,3 +714,18 @@ h3 {
 .user-name {
     line-height: 1.4;
 }
+
+/* review */
+.review-rating {
+    padding: 0 30px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+}
+
+.review-rating > span {
+    font-size: 1.8rem;
+    font-weight: 500;
+    line-height: 24px;
+}
