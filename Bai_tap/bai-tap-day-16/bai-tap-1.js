@@ -126,9 +126,9 @@ showGreeting("bài 6")
 
 ///
 showGreeting("bài 8")
-n = 7;       
+let rowNumber = 5;       
 let count = 1;
-for (let i = 1; i <= n; i++) {   
+for (let i = 1; i <= rowNumber; i++) {   
     let row = "";                   
     for (let j = 1; j <= i; j++) { 
         row += count + " ";     
