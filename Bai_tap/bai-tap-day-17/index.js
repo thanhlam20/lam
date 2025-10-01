@@ -2,7 +2,8 @@ function showGreeting(title) {
     console.log(title);
 }
 //////
-showGreeting("bài 1");
+showGreeting("bài 1 :bài này em bổ xung sau ạ :(((((((");
+
 
 
 
