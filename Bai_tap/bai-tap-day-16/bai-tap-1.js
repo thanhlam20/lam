@@ -64,7 +64,7 @@ function checkPrime(n) {
 }
 
 if (checkPrime(n)) {
-    console.log(n + " là số nguyên tố");
+    console.log(n + " là số nguyên tố" );
 } else {
     console.log(n + " không phải số nguyên tố");
 }
@@ -80,9 +80,9 @@ let checkOdd = "Các số lẻ là: ";
 
 for (let i = 1; i <= n; i++) {
     if (i % 2 === 0) {
-        checkEven += i + " ";
+        checkEven += i + " , ";
     } else {
-        checkOdd += i + " ";  
+        checkOdd += i + " , ";  
     }
 }
 
@@ -122,7 +122,14 @@ console.log(`tổng số lẻ là ${sumOdd}`);
 
 //////
 showGreeting("bài 6")
-
+for (i = 1; i < 9; i++) {
+    let box1 = document.createElement("div");
+    if (i % 2 === 0) {
+        box1.style.backgroundColor = "black";
+    } else {
+        box1.style.backgroundColor = "white";
+    }
+}
 
 ///
 showGreeting("bài 8")
