@@ -15,7 +15,7 @@ function checkPassword(password) {
     let lowerCount = 0;
     let numberCount = 0;
     let specialCuont = 0;
-    let specialChars = "!@#$%^&*()";
+    let specialChars = "! @ # $ % ^ & * ( )";
     for (let i = 0; i < password.length; i++) {
         let chars = password[i];
         if (chars >= "65" && chars <= "Z") {
@@ -37,7 +37,7 @@ function checkPassword(password) {
         return false;
     }
 }
-console.log(checkPassword("(THelues2)"));
+console.log(checkPassword("#THelues2ee"));
 
 ////////
 showGreeting("bài 3");

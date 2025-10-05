@@ -23,4 +23,18 @@
 //     }
 // }
 // console.log(output);
-console.log(String.prototype);
+// console.log(String.prototype);
+
+
+let numberA = +prompt("Nhập số A");
+let numberB = +prompt("Nhập số B");
+
+function isNumber(value) {
+    return typeof value === "number" && !isNaN(value);
+}
+
+if (isNumber(numberA) && isNumber(numberB)) {
+    console.log(`Tổng A và B là: ${numberA + numberB}`);
+} else {
+    console.log("Số không hợp lệ")
+}
