@@ -36,8 +36,8 @@ const capitalizedNames = cleanedNames.map(function(name) {
     return name.charAt(0).toUpperCase() + name.slice(1);
 });
 
-console.log("Cleaned names:", cleanedNames);
-console.log("Capitalized names:", capitalizedNames);
+console.log("Tạo mảng mới chứa các phần tử đã được xoá khoảng trắng thừa và viết thường toàn bộ:", cleanedNames);
+console.log("Tạo mảng mới viết chữ cái đầu hoa:", capitalizedNames);
 
 //////////////////////
 showGreeting("bài 3");
