@@ -162,9 +162,9 @@ const myArr_3 = [
 //////////////////////
 showGreeting("bài 8");
 const scores = [ 
-  [8, 9, 7],   // student 1
-  [6, 5, 7],   // student 2
-  [10, 9, 8]   // student 3
+  [8, 9, 7],  
+  [6, 5, 7],  
+  [10, 9, 8]  
 ];
 
 const averageScores = scores.map(function(studentScores) {
