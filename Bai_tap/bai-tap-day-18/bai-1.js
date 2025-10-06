@@ -147,17 +147,34 @@ console.log("Ghép tất cả thành 1 mảng 1 chiều:", arrOneWay);
 //////////////////////
 showGreeting("bài 7");
 const myArr_3 = [ 
-
   [2, 4, 6], 
-
   [8, 10, 12], 
-
   [14, 16, 18] 
+];
 
-]
+const n = myArr_3.length;
+const mainDiagonal = [];
+const secondaryDiagonal = [];
+let sumMain = 0;
+let sumSecondary = 0;
 
+for (let i = 0; i < n; i++) {
+    mainDiagonal.push(myArr_3[i][i]);
+    sumMain += myArr_3[i][i];
 
+    secondaryDiagonal.push(myArr_3[i][n - 1 - i]);
+    sumSecondary += myArr_3[i][n - 1 - i];
+}
 
+let sum = sumSecondary + sumMain;
+
+console.log("Lấy ra các phần tử trên đường chéo chính:", mainDiagonal);
+console.log("Tổng đường chéo chính:", sumMain);
+
+console.log("Lấy ra các phần tử trên đường chéo phụ:", secondaryDiagonal);
+console.log("Tổng đường chéo phụ:", sumSecondary);
+
+console.log("Tổng 2 đường chéo là:", sum);
 
 //////////////////////
 showGreeting("bài 8");
