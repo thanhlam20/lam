@@ -93,5 +93,5 @@ function hasPrime(numbers) {
     return numbers.find(isPrime) !== undefined;
 }
 
-console.log(hasPrime([2, 3, 5, 9])); 
+console.log(hasPrime([1, 4, 6, 8, 9, 10, 12, 14, 15, 16])); 
 
