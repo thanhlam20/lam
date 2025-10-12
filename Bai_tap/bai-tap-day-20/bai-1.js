@@ -68,6 +68,9 @@ console.log(students);
 const  goodStudent = students.filter((student) => student.averageScore >= 8);
 console.log(goodStudent);
 
+students.sort((a, b) => b.averageScore - a.averageScore);
+console.log(students);  
+
 /////
 showGreeting("bài 4");
 const posts = [ 
@@ -117,6 +120,13 @@ const newtags = posts.reduce((acc, post_1) => {
     return acc;
 }, []);
 console.log(newtags);
+
+const anComment = posts.reduce((acc, post_1) => {
+    const check = post_1.comments.filter(comment => comment.user === "An");
+    return acc.concat(check);
+}, []);
+
+console.log(anComment);
 
 
 
