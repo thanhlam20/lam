@@ -122,11 +122,13 @@ const newtags = posts.reduce((acc, post_1) => {
 console.log(newtags);
 
 const anComment = posts.reduce((acc, post_1) => {
+    //console.log(post_1.comments)
     const check = post_1.comments.filter(comment => comment.user === "An");
     return acc.concat(check);
 }, []);
 
 console.log(anComment);
+
 
 
 

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .menu {
+        width: 250px;
+        list-style: none;
+        background-color: rgba(39, 38, 38, 0.92);
+        display: block;
+        margin: 100px auto 0;
+      }
+      a {
+        color: white;
+        text-decoration: none;
+      }
+      .menu li ul {
+        list-style: none;
+        display: none;
+      }
+      .menu a {
+        display: block;
+        padding: 5px 10px;
+      }
+
+      .menu li.has-childen > a::after {
+        content: "▼";
+        font-size: 0.8rem;
+        /* display: block; */
+        margin-left: 150px;
+      }
+    </style>
+  </head>
+  <body>
+    <ul class="menu">
+      <li><a href="#">Menu1</a></li>
+      <li>
+        <a href="#">Menu2</a>
+        <ul>
+          <li><a href="#">Menu2.1</a></li>
+          <li><a href="#">Menu2.2</a></li>
+          <li><a href="#">Menu2.3</a></li>
+          <li><a href="#">Menu2.4</a></li>
+        </ul>
+      </li>
+      <li><a href="#">Menu3</a></li>
+      <li>
+        <a href="#">Menu4</a>
+        <ul>
+          <li><a href="#">Menu4.1</a></li>
+          <li><a href="#">Menu4.2</a></li>
+          <li><a href="#">Menu4.3</a></li>
+          <li><a href="#">Menu4.4</a></li>
+        </ul>
+      </li>
+      <li><a href="#">Menu5</a></li>
+    </ul>
+    <script src="./ex06.js"></script>
+  </body>
+</html>

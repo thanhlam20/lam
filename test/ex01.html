@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Giỏ hàng</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+    <style type="text/tailwindcss">
+      table,
+      th,
+      td {
+        @apply border border-black;
+      }
+      th,
+      td {
+        @apply px-3 py-2 text-center;
+      }
+      h2 {
+        @apply font-bold text-lg my-2;
+      }
+      button {
+        @apply border border-black px-2 py-1 rounded;
+      }
+    </style>
+  </head>
+
+  <body class="p-4">
+    <h2>DANH SÁCH SẢN PHẨM</h2>
+    <table class="w-full border-collapse mb-4">
+      <thead class="bg-gray-100">
+        <tr>
+          <th>STT</th>
+          <th>Tên sản phẩm</th>
+          <th>Giá</th>
+          <th>Thêm vào giỏ</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>1</td>
+          <td>Sản phẩm 1</td>
+          <td data-price="1000">1000</td>
+          <td>
+            <input
+              type="number"
+              value="1"
+              min="1"
+              class="quantity border w-16 text-center"
+            />
+            <button class="add-to-cart bg-gray-200 hover:bg-gray-300 ml-1">
+              Thêm vào giỏ
+            </button>
+          </td>
+        </tr>
+        <tr>
+          <td>2</td>
+          <td>Sản phẩm 2</td>
+          <td data-price="2000">2000</td>
+          <td>
+            <input
+              type="number"
+              value="1"
+              min="1"
+              class="quantity border w-16 text-center"
+            />
+            <button class="add-to-cart bg-gray-200 hover:bg-gray-300 ml-1">
+              Thêm vào giỏ
+            </button>
+          </td>
+        </tr>
+        <tr>
+          <td>3</td>
+          <td>Sản phẩm 3</td>
+          <td data-price="3000">3000</td>
+          <td>
+            <input
+              type="number"
+              value="1"
+              min="1"
+              class="quantity border w-16 text-center"
+            />
+            <button class="add-to-cart bg-gray-200 hover:bg-gray-300 ml-1">
+              Thêm vào giỏ
+            </button>
+          </td>
+        </tr>
+        <tr>
+          <td>4</td>
+          <td>Sản phẩm 4</td>
+          <td data-price="4000">4000</td>
+          <td>
+            <input
+              type="number"
+              value="1"
+              min="1"
+              class="quantity border w-16 text-center"
+            />
+            <button class="add-to-cart bg-gray-200 hover:bg-gray-300 ml-1">
+              Thêm vào giỏ
+            </button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h2>GIỎ HÀNG</h2>
+    <div id="cart-container"></div>
+
+    <!-- Nối file JavaScript riêng -->
+    <script src="./ex01.js"></script>
+  </body>
+</html>
