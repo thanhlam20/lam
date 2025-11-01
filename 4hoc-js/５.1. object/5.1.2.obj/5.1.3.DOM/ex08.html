@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .up {
+        color: green;
+        margin: 0 10px;
+      }
+
+      .down {
+        color: red;
+      }
+
+      ul li {
+        margin: 10px 0;
+      }
+      ul {
+        list-style: none;
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        border: 1px solid red;
+      }
+      .selected {
+        border: 1px dashed green;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- <div id="app">
+      <h2>F8 - DOM</h2>
+    </div>
+
+    <button>ADD</button> -->
+    <ul>
+      <li>Item1<span class="up">up</span> <span class="down">down</span></li>
+      <li>Item2<span class="up">up</span> <span class="down">down</span></li>
+      <li>Item3<span class="up">up</span> <span class="down">down</span></li>
+      <li>Item4<span class="up">up</span> <span class="down">down</span></li>
+      <li>Item5<span class="up">up</span> <span class="down">down</span></li>
+    </ul>
+    <script src="./ex08.js"></script>
+  </body>
+</html>

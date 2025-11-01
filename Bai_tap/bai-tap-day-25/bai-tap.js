@@ -24,6 +24,8 @@ table.addEventListener("click", (e) => {
         const price = rowTable.children[2].innerText;
         const qnt = rowTable.children[3].children[0].value;
 
+        
+
         //  số lượng
         input.value = qnt;
         input.type = "number";
@@ -52,9 +54,11 @@ table.addEventListener("click", (e) => {
 
         tr.append(td1, td2, td3, td4, td5, td6);
         
-        render.append(tr,cartUpdate,cartDelete); // render ra giỏ hàng
+        render.append(tr); // render ra giỏ hàng
 
-        console.log(render)
+        // if () {
+        //     render.append(cartUpdate,cartDelete);
+        // }
     };
 });
 
