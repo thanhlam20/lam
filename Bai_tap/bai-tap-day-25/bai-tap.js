@@ -1,82 +1,77 @@
 const table = document.querySelector("#table");
 const render = document.querySelector(".cart_data");
 
+
 table.addEventListener("click", (e) => {
-     console.log(e.target.parentElement.parentElement)
-    if (e.target.className === "js-btn") {
-        const rowTable = e.target.parentElement.parentElement;
-        const tr = document.createElement("tr"); // hàng tương ứng khi click
-        const td1 = document.createElement("td"); // số thứ tự
-        const td2 = document.createElement("td"); // tên sản phẩm
-        const td3 = document.createElement("td"); // giá
-        const td4 = document.createElement("td"); // số lượng
-        const td5 = document.createElement("td"); // thành tiền
-        const td6 = document.createElement("td"); // nút xoá
+  console.log(e.target.parentElement.parentElement);
+  if (e.target.className === "js-btn") {
+    const rowTable = e.target.parentElement.parentElement;
+    const name = rowTable.children[1].innerText;
+    const price = rowTable.children[2].innerText;
+    const qnt = rowTable.children[3].children[0].value;
 
-        const input = document.createElement("input");
-        const button = document.createElement("button");
-         const cartDelete = document.createElement("button");
-         const cartUpdate = document.createElement("button");
+    // Kiểm tra nếu sản phẩm đã có trong giỏ hàng
+    let existingRow = null;
+    const rows = render.querySelectorAll("tr");
+    for (let row of rows) {
+      const existingName = row.children[1].innerText;
+      if (existingName === name) {
+        existingRow = row;
+        break;
+      }
+    }
 
+    if (existingRow) {
+      // Nếu đã có, chỉ cập nhật số lượng
+      const existingInput = existingRow.children[3].children[0];
+      existingInput.value = +existingInput.value + +qnt; 
+      // Cập nhật thành tiền
+      const newTotal = +price * +existingInput.value;
+      existingRow.children[4].innerText = newTotal;
+    } else {
 
-        const STT = rowTable.children[0].innerText;
-        const name = rowTable.children[1].innerText;
-        const price = rowTable.children[2].innerText;
-        const qnt = rowTable.children[3].children[0].value;
+      const tr = document.createElement("tr");
+      const td1 = document.createElement("td");
+      const td2 = document.createElement("td");
+      const td3 = document.createElement("td");
+      const td4 = document.createElement("td");
+      const td5 = document.createElement("td");
+      const td6 = document.createElement("td");
 
-        
+      const input = document.createElement("input");
+      const button = document.createElement("button");
 
-        //  số lượng
-        input.value = qnt;
-        input.type = "number";
+      input.value = qnt;
+      input.type = "number";
 
-        // tính toán cột thành tiền
-        const total = +price * +qnt;
+      const total = +price * +qnt;
 
-        // nút xoá
-        button.innerText = "Xoá";
-        button.className = "remove";
+      button.innerText = "Xoá";
+      button.className = "remove";
 
-        //nút xoá gio hàng
-         cartDelete.innerText = "Xoá giỏ hàng";
-         cartDelete.className = "js-delete";
+      td1.append(render.children.length + 1);
+      td2.append(name);
+      td3.append(price);
+      td4.append(input);
+      td5.append(total);
+      td6.append(button);
 
-         // nút cập nhật
-         cartUpdate.innerText = "Cập nhật giỏ hàng";
-         cartUpdate.className = "js-update";
+      tr.append(td1, td2, td3, td4, td5, td6);
+      render.append(tr);
+    }
+  }
+});
 
-        td1.append(render.children.length + 1);
-        td2.append(name);
-        td3.append(price);
-        td4.append(input);
-        td5.append(total);
-        td6.append(button);
-
-        tr.append(td1, td2, td3, td4, td5, td6);
-        
-        render.append(tr); // render ra giỏ hàng
-
-        // if () {
-        //     render.append(cartUpdate,cartDelete);
-        // }
-    };
+// Giữ nguyên event listeners cho xóa
+render.addEventListener("click", (e) => {
+  if (e.target.className === "remove") {
+    const rowTable = e.target.parentElement.parentElement;
+    render.removeChild(rowTable);
+  }
 });
 
 render.addEventListener("click", (e) => {
-    if (e.target.className === "remove") {
-        const rowTable = e.target.parentElement.parentElement;
-        render.removeChild(rowTable);
-    }
+  if (e.target.className === "js-delete") {
+    render.innerHTML = "";
+  }
 });
-
-render.addEventListener("click", (e) => {
-    if (e.target.className === "js-delete") {
-        render.innerHTML = "";
-    }
-});
-
-// const updateBtn = document.querySelector(".update");
-
-// updateBtn.addEventListener("click", () => {
-//     render.innerHTML = "";
-// });
