@@ -104,5 +104,11 @@ function hideTabEl() {
 
 function hideItem() {
    renameBox.style.display = "none";
-  //  overlay.style.display = "none";
+   overlay.style.display = "none";
 }
+
+overlay.addEventListener("click", (e) => {
+  if (e.target === overlay) {
+    hideItem();
+  }
+});
