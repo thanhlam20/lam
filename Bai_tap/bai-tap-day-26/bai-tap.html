@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      body {
+        background-color: rgb(199, 242, 242);
+        display: flex;
+        position: relative;
+      }
+      .main {
+        margin: 100px auto;
+      }
+      .menu {
+        font-size: 30px;
+        padding: 20px;
+        border-radius: 5px;
+        list-style: none;
+        background-color: rgb(192, 223, 251);
+      }
+      li {
+        padding-left: 14px;
+      }
+      .up {
+        color: red;
+      }
+      .down {
+        color: green;
+      }
+      .up,
+      .down {
+        cursor: pointer;
+        padding: 0 12px;
+      }
+      .selected {
+        background-color: rgba(0, 255, 255, 0.39);
+        border-radius: 5px;
+      }
+
+      .sub-menu {
+        border-radius: 6px;
+        background-color: rgb(123, 175, 203);
+      }
+      .sub-menu li {
+        list-style: none;
+        padding: 5px 30px;
+
+        cursor: pointer;
+        font-size: 15px;
+        color: white;
+      }
+      .sub-menu li:first-child {
+        border-bottom: 1px solid #333;
+      }
+      .tab {
+        display: none;
+        position: absolute;
+      }
+      .rename-box {
+        display: none;
+        position: absolute;
+        top: 30%;
+        left: 40%;
+        background-color: white;
+        padding: 10px;
+        border-radius: 5px;
+        z-index: 9999;
+      }
+      .rename-input {
+        padding: 5px;
+        font-size: 16px;
+        margin-right: 10px;
+      }
+      .save {
+        padding: 6px;
+        cursor: pointer;
+      }
+      .overlay {
+        display: none;
+        position: fixed;
+        inset: 0;
+        background-color: rgba(0, 0, 0, 0.3);
+        z-index: 10;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="main">
+      <ul class="menu">
+        <li>Item 1<span class="up">Up</span><span class="down">Down</span></li>
+        <li>Item 2<span class="up">Up</span><span class="down">Down</span></li>
+        <li>Item 3<span class="up">Up</span><span class="down">Down</span></li>
+        <li>Item 4<span class="up">Up</span><span class="down">Down</span></li>
+        <li>Item 5<span class="up">Up</span><span class="down">Down</span></li>
+      </ul>
+    </div>
+
+    <div class="tab">
+      <ul class="sub-menu">
+        <li class="rename">Sửa</li>
+        <li class="delete">Xoá</li>
+      </ul>
+    </div>
+
+    <div class="overlay">
+      <div class="rename-box">
+        <input type="text" class="rename-input" />
+        <button class="save">Lưu</button>
+      </div>
+    </div>
+    <script src="./bai-tap.js"></script>
+  </body>
+</html>
