@@ -29,6 +29,7 @@ menu.addEventListener("click", (e) => {
         e.stopPropagation();
         removeSelected();
         e.target.classList.add("selected");
+        hideTabEl()
     }
 });
 
@@ -43,7 +44,7 @@ document.addEventListener("click", removeSelected);
 ///click chuot
 menu.addEventListener("contextmenu", (e) => {
   e.preventDefault(); 
-  const li = e.target.closest("li"); 
+  const li = e.target.closest("li");
   if (li) {
     currentLi = li;
     tabEl.style.display = "block";
@@ -79,7 +80,7 @@ saveBtn.addEventListener("click", () => {
     const upBtn = currentLi.querySelector(".up");
     const downBtn = currentLi.querySelector(".down");
 
-    currentLi.firstChild.textContent = `${newName} `;
+    currentLi.childNode[0].nodeValue.trim() = `${newName} `;
 
     currentLi.append(upBtn);
     currentLi.append(downBtn);
