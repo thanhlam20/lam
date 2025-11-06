@@ -45,7 +45,7 @@ form.addEventListener("submit", (e) => {
 
   deleteIcon.addEventListener("click", () => {
     taskEl.remove();
-  });
+  })
 
   editicon.addEventListener("click", () => {
     const editInput = document.createElement("input");
@@ -79,5 +79,5 @@ form.addEventListener("submit", (e) => {
       btnGroup.append(editicon);
       btnGroup.append(deleteIcon);
     });
-  });
+  })
 });
