@@ -136,7 +136,7 @@ const deleteBtnList = postList.querySelectorAll(".js-delete-item");
 
 const setLoading = (status = true) =>  {
     const loaddingEl = document.querySelector(".js-loading");
-    loaddingEl.innerHTML = status ? `<span class="text-3xl block text-center"> loatding....</span>` : '';
+    loaddingEl.innerHTML = status ? `<span class="text-3xl block text-center"> loading....</span>` : '';
 };
 
 const renderError = (message) => {
