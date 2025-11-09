@@ -1,6 +1,13 @@
 const BASE_URL = `https://dummyjson.com`;
 const postList = document.querySelector(".js-container");
 const query = {};
+
+const POSTS_PER_PAGE = 5;
+
+let currentPage = 1;
+let allPosts = [];
+
+
 ///them moi
 const addPost = document.querySelector(".js-add-post");
 addPost.addEventListener("click", () => {
@@ -10,7 +17,7 @@ addPost.addEventListener("click", () => {
     <div class="flex flex-col">
     <input class="js-new-title p-2 rounded-md mb-5" placeholder="Nhập tiêu đề mới...">
     <textarea class="js-new-body border border-gray-400 rounded-md mb-5 p-2" placeholder="Nhập nội dung mới..."></textarea>
-    <button class="js-save-new bg-[#0fb40f91] rounded-md text-white text-xl p-2">Lưu bài viết</button>
+    <button class="js-save-new bg-[#0fb40f91] rounded-md text-white text-xl p-2">Thêm bài viết mới</button>
     </div>
     `,
    }));
@@ -39,7 +46,11 @@ addPost.addEventListener("click", () => {
             if (!newData.ok) {
                 throw new Error("Bài viết mới chưa đc thêm!");
             }
-            /////////////////////////////////////
+
+            const newPost = await newData.json();
+            allPosts.unshift(newPost);
+            renderPosts(allPosts);
+
             alert("Đã thêm bài viết thành công!");
             closeModal();
         } catch (error) {
@@ -125,11 +136,11 @@ const deleteBtnList = postList.querySelectorAll(".js-delete-item");
     btn.addEventListener("click", (e) => {
        if (confirm ("Bạn chắc chắn muốn xoá bài viết khổng??")) {
         alert("Bài viết đã được xoá!");
+         e.target.closest(".js-container").classList.add("hidden");
        } else {
         alert("Bạn đã huỷ xoá bài viết");
+        return;
        }
-
-        e.target.closest(".js-container").classList.add("hidden");
         });
       });
 };
@@ -156,6 +167,7 @@ const fetchPost = async () => {
             throw new Error ("Failed to fetch / posts");
         }
         const { posts } = await response.json();
+         allPosts = [...posts];
 
         let sortedPosts = [...posts];
         if (query.sort === "desc") {
@@ -172,7 +184,7 @@ const fetchPost = async () => {
     }
 };
 
-///cu va moi
+///sap xep
 const addSortEvent = () => {
     const newBtn = document.querySelector(".new");
     const oldBtn = document.querySelector(".old");
@@ -226,9 +238,11 @@ const closeModal = () => {
     modalEl.classList.add("hidden");
     modalTitle.innerText = "";
     modalContent.innerText = "";
+   
 };
-
 const addEventCloseModal = () => {
+     const closeModalEl = document.querySelector(".js-close-modal");
+    closeModalEl.addEventListener("click", closeModal);
     const overlay = document.querySelector(".js-overlay");
     overlay.addEventListener("click", closeModal);
     document.addEventListener("keyup", (e) => {
@@ -237,6 +251,8 @@ const addEventCloseModal = () => {
         }
     });
 };
+ 
+
 
 fetchPost();
 addSearchEvent();
