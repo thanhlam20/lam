@@ -188,11 +188,20 @@ const fetchPost = async () => {
 const addSortEvent = () => {
     const newBtn = document.querySelector(".new");
     const oldBtn = document.querySelector(".old");
-    newBtn.addEventListener("click", () => {
+
+    const setActive = (btn) => {
+        newBtn.classList.remove("bg-[#fdfd51]");
+        oldBtn.classList.remove("bg-[#fdfd51]");
+        btn.classList.add("bg-[#fdfd51]");
+    };
+
+    newBtn.addEventListener("click", (e) => {
+        setActive(newBtn);
         query.sort = "desc";
         fetchPost();
     });
     oldBtn.addEventListener("click", () => {
+        setActive(oldBtn);
         query.sort = "asc";
         fetchPost();
     });
