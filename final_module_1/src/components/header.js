@@ -1,11 +1,13 @@
 import { search } from "./search";
 import { login } from "./login";
-export const header = () => {
+export const Header = () => {
     return `
-    <div class="border-b border-[#e0d8d817] p-3 flex justify-between items-center">
-        <div class="flex gap-4 items-center">
-            <i class="fa-solid fa-bars text-2xl cursor-pointer "></i>
-            <img class="w-20 cursor-pointer" src="./src/assets/img/YouTube_Music_2024.png" alt="logo">
+    <div class="border-b border-[#e0d8d817] p-3 flex justify-between items-center ">
+        <div class="flex gap-8 items-center ml-3">
+           <button id="hamburger">
+           <i class="fa-solid fa-bars text-2xl cursor-pointer text-white "></i>
+           </button>
+            <img class="w-20 cursor-pointer" src="./src/assets/img/youtube-music.svg" alt="logo">
         </div>
         ${search()}
         ${login()}
