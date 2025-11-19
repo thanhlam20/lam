@@ -1,8 +1,6 @@
 import Home from "./pages/home"
-async function app() {
+export const app = async () => {
     return `
     ${Home()}
     `
 };
-
-export default app;
