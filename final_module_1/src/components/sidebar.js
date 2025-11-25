@@ -23,20 +23,16 @@ export const SideBar = () => {
     `
 };
 
-/// Xử lý đóng mở sidebar
+///đóng mở sidebar
  export const initSidebar = () => {
     const hamburger = document.getElementById("hamburger");
     const sidebar = document.getElementById("sidebar-container");
-    const songlistWidth = document.querySelector(".js-list-songs")
-    console.log(songlistWidth)
 
     if (!hamburger || !sidebar) return;
 
     hamburger.addEventListener("click", () => {
-        sidebar.classList.toggle("w-50");
-        sidebar.classList.toggle("w-21");
-        songlistWidth.classList.toggle("max-w-5xl")
-        songlistWidth.classList.toggle("max-w-1xl")
+        sidebar.classList.toggle("w-64");
+        sidebar.classList.toggle("w-16");
         
         
         const textList = document.querySelectorAll(".js-sidebar-text");
