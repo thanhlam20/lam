@@ -1,27 +1,31 @@
 export const SideBar = () => {
     return `
-    <div id="sidebar-container" class=" flex top-0 left-0 min-h-screen w-50 p-4 flex-col bg-[#030303e8] pt-25">
-        <ul id="sidebar" class="flex fixed flex-col gap-4  text-lg text-white ">
+    <div id="sidebar-container" class="fixed top-0 left-0 h-screen w-64 p-4 flex flex-col bg-[#030303e8] pt-25">
+        <ul id="sidebar" class="flex flex-col gap-4 text-lg text-white">
             <li class="js-list flex gap-6 items-center py-3 px-2 pr-5 rounded-md bg-[#333] cursor-pointer">
-            <i class="fa-regular fa-house px-2 text-2xl "></i>
-            <a class="js-sidebar-text text-base">Trang chủ</a>
+                <i class="fa-regular fa-house px-2 text-2xl"></i>
+                <a class="js-sidebar-text text-base">Trang chủ</a>
             </li>
-            <li class="js-list flex gap-6 items-center py-3 px-2 pr-5  rounded-md cursor-pointer">
-            <i class="fa-regular fa-compass px-2  text-2xl"></i>
-            <a class="js-sidebar-text text-base">Khám phá</a>
+
+            <li class="js-list flex gap-6 items-center py-3 px-2 pr-5 rounded-md cursor-pointer">
+                <i class="fa-regular fa-compass px-2 text-2xl"></i>
+                <a class="js-sidebar-text text-base">Khám phá</a>
             </li>
-            <li class="js-list flex gap-6 items-center py-3 px-2 pr-5  rounded-md cursor-pointer">
-            <i class="fa-regular fa-bookmark px-2  text-2xl"></i>
-            <a class="js-sidebar-text text-base">Thư viện</a>
+
+            <li class="js-list flex gap-6 items-center py-3 px-2 pr-5 rounded-md cursor-pointer">
+                <i class="fa-regular fa-bookmark px-2 text-2xl"></i>
+                <a class="js-sidebar-text text-base">Thư viện</a>
             </li>
-            <li class="js-list flex gap-6 items-center py-3 px-2 pr-5  rounded-md cursor-pointer">
-            <i class="fa-regular fa-circle-play px-2 text-2xl "></i>
-            <a class="js-sidebar-text text-base">Nâng cấp</a>
+
+            <li class="js-list flex gap-6 items-center py-3 px-2 pr-5 rounded-md cursor-pointer">
+                <i class="fa-regular fa-circle-play px-2 text-2xl"></i>
+                <a class="js-sidebar-text text-base">Nâng cấp</a>
             </li>
         </ul>
     </div>
-    `
+    `;
 };
+
 
 ///đóng mở sidebar
  export const initSidebar = () => {
@@ -30,16 +34,16 @@ export const SideBar = () => {
 
     if (!hamburger || !sidebar) return;
 
-    hamburger.addEventListener("click", () => {
-        sidebar.classList.toggle("w-64");
-        sidebar.classList.toggle("w-16");
+    // hamburger.addEventListener("click", () => {
+    //     sidebar.classList.toggle("w-64");
+    //     sidebar.classList.toggle("w-20");
         
         
-        const textList = document.querySelectorAll(".js-sidebar-text");
-        textList.forEach((text) => {
-            text.classList.toggle("hidden")
-        });
-    });
+    //     const textList = document.querySelectorAll(".js-sidebar-text");
+    //     textList.forEach((text) => {
+    //         text.classList.toggle("hidden")
+    //     });
+    // });
 
     document.addEventListener("click", (e) => {
     const liEl = e.target.closest(".js-list");

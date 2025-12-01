@@ -1,5 +1,4 @@
-import { API_URL } from "../main.js";
-
+import { API_URL } from "../service/playlistDetailService";
 export const loadTagList = async () => {
     try {
         const res = await fetch(`${API_URL}/moods`);
