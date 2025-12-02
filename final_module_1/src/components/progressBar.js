@@ -16,10 +16,8 @@ const songsfake = {
             "popularity": 999
         };
 
-
 export const progressBar = (src, name, albumname, audioSrc) => {
     return`
-
     <audio id="audio" src="${songsfake.audioUrl}" class=" mb-[250px] w-full " ></audio>
     <div class="js-progress-bar fixed bottom-0 w-full h-20 bg-[#212121]" >
         <input id="progress" class="w-full progress" type="range" value="0" step="1" min="0" max="100">
@@ -30,19 +28,19 @@ export const progressBar = (src, name, albumname, audioSrc) => {
                 <i class="js-pause fa-solid fa-pause text-4xl hidden" ></i>
                 <i class="js-next fa-solid fa-forward-step text-2xl"></i>
                 <div class="text-white ml-5">
-                    <span>00</span>
+                    <span class="js-minute"></span>
                     <span>/</span>
-                    <span>00</span>
+                    <span class="seconds"></span>
                 </div>
             </div>
             <div class="flex gap-3 items-center">
                 <div class="">
-                <img class="w-[50px] h-[45px] object-cover " src="${src}" alt="nhac">
+                <img class="js-img w-[50px] h-[45px] object-cover " src="${src}" alt="nhac">
                 </div>
                 <div class="text-white">
-                    <span>${name} </span>
+                    <span class="js-name">${name} </span>
                     <div>
-                        <span>${albumname}</span>
+                        <span class="js-album">${albumname}</span>
                     </div>
                 </div>
                 <div class="text-white">
@@ -62,6 +60,7 @@ export const progressBar = (src, name, albumname, audioSrc) => {
     `
 };
 
+
 export const initProgressBar = async () => {
     const audioEl = document.querySelector("#audio");
     const playEl = document.querySelector(".js-play");
@@ -69,15 +68,34 @@ export const initProgressBar = async () => {
     const progressEl = document.querySelector("#progress");
     const nextSong = document.querySelector(".js-next");
     const prevsong = document.querySelector(".js-prev");
-    const getSongIndex = await playlistDetailService.getLineSongs("bu-n-3");
+    const img = document.querySelector(".js-img");
+    const nameEl = document.querySelector(".js-name");
+    const album = document.querySelector(".js-album");
+    const minute = document.querySelector(".js-minute");
+    const seconds = document.querySelector(".seconds");
 
-///khi song được play
+    let currentIndex = 0;
+    const songList = await playlistDetailService.getLineSongs("bu-n-3");
+
+    const formatTime = (sec) => {
+        const minute = Math.floor(sec / 60);
+        const seconds = Math.floor(sec % 60);
+        return `${minute}:${seconds.toString().padStart(2,'0')}`;
+    }
+
+    const loadSong = (song) => {
+        img.src = song.thumb;
+        nameEl.textContent = song.name;
+        album.textContent = song.albumName || song.slug;
+        audioEl.src = song.audioUrl || songsfake.audioUrl;
+    }
+
+    // Play Pause
     playEl.addEventListener("click", () => {
         audioEl.play(); 
         playEl.classList.add("hidden"); 
         pauseEl.classList.remove("hidden");
     });
-///khi song bị pause
     pauseEl.addEventListener("click", () => {
         audioEl.pause();   
         pauseEl.classList.add("hidden");
@@ -88,19 +106,33 @@ export const initProgressBar = async () => {
         if(audioEl.duration) {
             const progressPercent = audioEl.currentTime / audioEl.duration * 100;
             progressEl.value = progressPercent;
+            minute.textContent = formatTime(audioEl.currentTime);
+            seconds.textContent = formatTime(audioEl.duration);
         }
     };
 
     progressEl.addEventListener("input", (e) => {
-    const seekTime = audioEl.duration * (e.target.value / 100);
-    audioEl.currentTime = seekTime;
+        const seekTime = audioEl.duration * (e.target.value / 100);
+        audioEl.currentTime = seekTime;
     });
 
-    nextSong.addEventListener ("click", () => {
-       
-    })
+    // Next
+    nextSong.addEventListener("click", () => {
+        currentIndex++;
+        if (currentIndex >= songList.length) currentIndex = 0;
+        loadSong(songList[currentIndex]);
+        audioEl.play();
+    });
 
+    // Prev
+    prevsong.addEventListener("click", () => {
+        currentIndex--;
+        if (currentIndex < 0) currentIndex = songList.length - 1;
+        loadSong(songList[currentIndex]);
+        audioEl.play();
+    });
 };
+
 
 
 
