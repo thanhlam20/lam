@@ -87,7 +87,7 @@ export const initProgressBar = async () => {
         img.src = song.thumb;
         nameEl.textContent = song.name;
         album.textContent = song.albumName || song.slug;
-        audioEl.src = song.audioUrl || songsfake.audioUrl;
+        audioEl.src = songsfake.audioUrl;
     }
 
     // Play Pause
