@@ -326,5 +326,3 @@ document.addEventListener("submit", async (e) => {
         }
     }
 });
-
-

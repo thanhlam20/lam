@@ -34,16 +34,16 @@ export const SideBar = () => {
 
     if (!hamburger || !sidebar) return;
 
-    // hamburger.addEventListener("click", () => {
-    //     sidebar.classList.toggle("w-64");
-    //     sidebar.classList.toggle("w-20");
+    hamburger.addEventListener("click", () => {
+        sidebar.classList.toggle("w-64");
+        sidebar.classList.toggle("w-20");
         
         
-    //     const textList = document.querySelectorAll(".js-sidebar-text");
-    //     textList.forEach((text) => {
-    //         text.classList.toggle("hidden")
-    //     });
-    // });
+        const textList = document.querySelectorAll(".js-sidebar-text");
+        textList.forEach((text) => {
+            text.classList.toggle("hidden")
+        });
+    });
 
     document.addEventListener("click", (e) => {
     const liEl = e.target.closest(".js-list");

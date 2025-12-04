@@ -1,16 +1,13 @@
 export const API_URL = "https://youtube-music.f8team.dev/api";
 
-export const GetSongs = async (slug) => {
+export const GetSongs = async () => {
     try {
-        const res = await fetch(`${API_URL}/playlists/details/${slug}`);
+        const res = await fetch(`${API_URL}/lines/bu-n-3/playlists`);
         const data = await res.json();
-
-        console.log("Playlist:", data);
 
         return data;
     } catch (e) {
         console.error("GetSongs error:", e);
-        return null;
     }
 };
 
